@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?Coder6"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>一个jsp向另一个jsp传值 | A Coder&#39;s Blog | 有关计算机的点点滴滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="jsp">
+    <meta name="description" content="一个jsp向另一个jsp传值
+通过jsp的内置对象—request对象获取参数：（1）通过超链接传参：例：把a.jsp中i的值传到b.jsp中：在a.jsp页面中的核心代码为:传参 （说明：给i赋值时也可以用jsp表达式，例如i=&amp;lt;%变量名 %&amp;gt;)在b.jsp页面中的核心代码为：  12&amp;lt;%String j=request.getParameter(&amp;quot;i&amp;quot;);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个jsp向另一个jsp传值">
+<meta property="og:url" content="http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/index.html">
+<meta property="og:site_name" content="A Coder's Blog">
+<meta property="og:description" content="一个jsp向另一个jsp传值
+通过jsp的内置对象—request对象获取参数：（1）通过超链接传参：例：把a.jsp中i的值传到b.jsp中：在a.jsp页面中的核心代码为:传参 （说明：给i赋值时也可以用jsp表达式，例如i=&amp;lt;%变量名 %&amp;gt;)在b.jsp页面中的核心代码为：  12&amp;lt;%String j=request.getParameter(&amp;quot;i&amp;quot;);">
+<meta property="og:updated_time" content="2017-01-06T13:31:51.966Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个jsp向另一个jsp传值">
+<meta name="twitter:description" content="一个jsp向另一个jsp传值
+通过jsp的内置对象—request对象获取参数：（1）通过超链接传参：例：把a.jsp中i的值传到b.jsp中：在a.jsp页面中的核心代码为:传参 （说明：给i赋值时也可以用jsp表达式，例如i=&amp;lt;%变量名 %&amp;gt;)在b.jsp页面中的核心代码为：  12&amp;lt;%String j=request.getParameter(&amp;quot;i&amp;quot;);">
+    
+        <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">刘哲</h5>
+          <a href="mailto:miuiclub@qq.com" title="miuiclub@qq.com" class="mail">miuiclub@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/LiuZhe6" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/3102110533" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">一个jsp向另一个jsp传值</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">一个jsp向另一个jsp传值</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-06T13:31:42.000Z" itemprop="datePublished" class="page-time">
+  2017-01-06
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一个jsp向另一个jsp传值"><span class="post-toc-number">1.</span> <span class="post-toc-text">一个jsp向另一个jsp传值</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-一个jsp向另一个jsp传值"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">一个jsp向另一个jsp传值</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月06日 21:31" datetime="2017-01-06T13:31:42.000Z"  itemprop="datePublished">2017-01-06</time>
+
+            
+
+
+            
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="一个jsp向另一个jsp传值"><a href="#一个jsp向另一个jsp传值" class="headerlink" title="一个jsp向另一个jsp传值"></a>一个jsp向另一个jsp传值</h1><ol>
+<li>通过jsp的内置对象—request对象获取参数：<br>（1）通过超链接传参：<br>例：把a.jsp中i的值传到b.jsp中：<br>在a.jsp页面中的核心代码为:<br>传参 （说明：给i赋值时也可以用jsp表达式，例如i=&lt;%变量名 %&gt;)<br>在b.jsp页面中的核心代码为：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;%String j=request.getParameter(&quot;i&quot;); %&gt;</div><div class="line">&lt;%=j %&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>（2）通过request.setAttribute()方法：<br>例：把a.jsp中表单中的name的值传送到b.jsp中：</p>
+<p>在a.jsp页面中的核心代码为：<br><code>&lt;%request.setAttribute(name,&quot;Danny&quot;);%&gt;</code><br>在b.jsp页面中的核心代码为：<br><code>&lt;%String getName=request.getParameter(&quot;name&quot;); %&gt;</code></p>
+<p>（3）通过表单传参：<br>例：把a.jsp中表单中的name的值传送到b.jsp中：<br>在a.jsp页面中的核心代码为：</p>
+<p>重要的是，在jsp脚本中是无法使用EL表达式的，但是可以替换<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;%</div><div class="line">    request.setAttribute(&quot;username&quot;, request.getAttribute(&quot;username&quot;));</div><div class="line">    request.setAttribute(&quot;email&quot;, request.getAttribute(&quot;email&quot;));</div><div class="line">%&gt;</div></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-06T13:31:51.966Z" itemprop="dateUpdated">2017年1月6日 21:31</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/01/06/一个jsp向另一个jsp传值/" target="_blank" rel="external">http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/</a>
+    </div>
+    <footer>
+        <a href="http://liuzhe6.github.io">
+            <img src="/img/avatar.png" alt="刘哲">
+            刘哲
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/&title=《一个jsp向另一个jsp传值》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/&title=《一个jsp向另一个jsp传值》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《一个jsp向另一个jsp传值》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/06/json语法/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">json语法</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/06/JavaScript/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JavaScript</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="一个jsp向另一个jsp传值" data-title="一个jsp向另一个jsp传值" data-url="http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>A Coder's Blog &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/&title=《一个jsp向另一个jsp传值》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/&title=《一个jsp向另一个jsp传值》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《一个jsp向另一个jsp传值》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/06/一个jsp向另一个jsp传值/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuElEQVR42u3awU4jMRAEUP7/p0HitAiSVHWPk6z05oQIGL85tE11f3zEz+f3c//Tf59ktXbNZOXhg4eHhzfa+v3lfi/9+9PZOvkK+V/Ew8PDew7v/mFwf+n8UEleU76H6ADDw8PDeykvKcQJvn0peHh4eP8vr70Ez7bbfo2Hh4f3Kl7+z39+bGzK/ewv4uHh4T2H1zbA3uHrg/09PDw8vEVXvX1m5TvH1PvBw8PDO8DLR6CSwakkhtiEFMlVezjhhYeHhxfz8g1dFRPkbz0ZVniwfzw8PLxjvE3TK3kFJ1plERUPDw/vGK+9wu4Hp+6vuW+e4eHh4T2H115/8y0m281Lf371x8PDw3sVry3u+4i2Hca6+fN4eHh4h3ltEU+ih/wKXnftZp09PDw8vMO8fetr1taazQBE/T08PDy8Na+NUNutt+FFe6VOXg0eHh7etby29M8u0LO4dhaC/PgUDw8P7wCv3e7sAt0eKpvrezFAgIeHhzfi5eW7TUrzqLcu9Hh4eHhvw5shZyHCflAgas7h4eHhPZGXR6vt2EE7lNAOcv3R38PDw8O7lLcZq2qjhM1hkx9dD5pheHh4eGvetaU/OVSujYmjcw8PDw/vAK8NC/IwYnaNbo+Tmyvg4eHhHeAlLflN/LppYs1WuHmxxsPDw7uUlxf0tljn4ewsECn2jIeHh3cpb9P0KkagFofQLMjAw8PDO82btaDyrbfFPT+ois4eHh4e3pr3WT5tjHstsg0v8PDw8E7wZtHDPozIg4m8IVenL3h4eHgL3qzp1R4Y7e8meWx0zODh4eEd47UtrjbUSKLYzQmGh4eH9868hJ0X99nlO2+54eHh4b2WlwcQm7GtWXD8IIzAw8PDO8BrS/YsyMgDi/Z6/WAyAg8PD+9S3qwBNtvK7LqctLsu7u/h4eHh/f2dL03usYYr0juTAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.7" async></script>
+
+
+
+
+
+
+
+</body>
+</html>

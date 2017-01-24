@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?Coder6"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>XML简介 | A Coder&#39;s Blog | 有关计算机的点点滴滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="XML">
+    <meta name="description" content="XML简介什么是XML可扩展标记语言是一种很像超文本标记语言的标记语言。它的设计宗旨是传输数据，而不是显示数据。它的标签没有被预定义。您需要自行定义标签。它被设计为具有自我描述性。它是W3C的推荐标准。  
+
+XML 树结构XML 文档形成了一种树结构，它从“根部”开始，然后扩展到“枝叶”。一个 XML 文档实例XML 使用简单的具有自我描述性的语法：第一行是 XML 声明。它定义 XML 的版本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XML简介">
+<meta property="og:url" content="http://liuzhe6.github.io/2017/01/18/XML简介/index.html">
+<meta property="og:site_name" content="A Coder's Blog">
+<meta property="og:description" content="XML简介什么是XML可扩展标记语言是一种很像超文本标记语言的标记语言。它的设计宗旨是传输数据，而不是显示数据。它的标签没有被预定义。您需要自行定义标签。它被设计为具有自我描述性。它是W3C的推荐标准。  
+
+XML 树结构XML 文档形成了一种树结构，它从“根部”开始，然后扩展到“枝叶”。一个 XML 文档实例XML 使用简单的具有自我描述性的语法：第一行是 XML 声明。它定义 XML 的版本">
+<meta property="og:image" content="http://liuzhe6.github.io/XML简介/xml-1.png">
+<meta property="og:image" content="http://liuzhe6.github.io/XML简介/xml-2.gif">
+<meta property="og:image" content="http://liuzhe6.github.io/XML简介/xml-3.png">
+<meta property="og:updated_time" content="2017-01-19T02:29:02.518Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XML简介">
+<meta name="twitter:description" content="XML简介什么是XML可扩展标记语言是一种很像超文本标记语言的标记语言。它的设计宗旨是传输数据，而不是显示数据。它的标签没有被预定义。您需要自行定义标签。它被设计为具有自我描述性。它是W3C的推荐标准。  
+
+XML 树结构XML 文档形成了一种树结构，它从“根部”开始，然后扩展到“枝叶”。一个 XML 文档实例XML 使用简单的具有自我描述性的语法：第一行是 XML 声明。它定义 XML 的版本">
+<meta name="twitter:image" content="http://liuzhe6.github.io/XML简介/xml-1.png">
+    
+        <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">刘哲</h5>
+          <a href="mailto:miuiclub@qq.com" title="miuiclub@qq.com" class="mail">miuiclub@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/LiuZhe6" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/3102110533" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">XML简介</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">XML简介</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-18T11:41:04.000Z" itemprop="datePublished" class="page-time">
+  2017-01-18
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#XML简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">XML简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是XML"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是XML</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#XML-树结构"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">XML 树结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#XML-语法规则"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">XML 语法规则</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#XML元素"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">XML元素</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#XML-属性"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">XML 属性</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-XML简介"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">XML简介</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月18日 19:41" datetime="2017-01-18T11:41:04.000Z"  itemprop="datePublished">2017-01-18</time>
+
+            
+
+
+            
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="XML简介"><a href="#XML简介" class="headerlink" title="XML简介"></a>XML简介</h1><h2 id="什么是XML"><a href="#什么是XML" class="headerlink" title="什么是XML"></a>什么是XML</h2><p>可扩展标记语言是一种很像超文本标记语言的标记语言。<br>它的设计宗旨是传输数据，而不是显示数据。<br>它的标签没有被预定义。您需要自行定义标签。<br>它被设计为具有自我描述性。<br>它是W3C的推荐标准。  </p>
+<hr>
+<h2 id="XML-树结构"><a href="#XML-树结构" class="headerlink" title="XML 树结构"></a>XML 树结构</h2><p>XML 文档形成了一种树结构，它从“根部”开始，然后扩展到“枝叶”。<br>一个 XML 文档实例<br>XML 使用简单的具有自我描述性的语法：<br><img src="XML简介/xml-1.png" alt="logo"><br>第一行是 XML 声明。它定义 XML 的版本 (1.0) 和所使用的编码 (ISO-8859-1 = Latin-1/西欧字符集)。<br>下一行描述文档的根元素（像在说：“本文档是一个便签”）：<br><code>&lt;note&gt;</code></p>
+<p>接下来 4 行描述根的 4 个子元素（to, from, heading 以及 body）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">to&gt;George&lt;/to&gt;</div><div class="line">&lt;from&gt;John&lt;/from&gt;</div><div class="line">&lt;heading&gt;Reminder&lt;/heading&gt;</div><div class="line">&lt;body&gt;Don&apos;t forget the meeting!&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<p>最后一行定义根元素的结尾：<br><code>&lt;/note&gt;</code>  </p>
+<p>从本例可以设想，该 XML 文档包含了 John 给 George 的一张便签。</p>
+<p>XML 文档形成一种树结构<br>XML 文档必须包含根元素。该元素是所有其他元素的父元素。<br>XML 文档中的元素形成了一棵文档树。这棵树从根部开始，并扩展到树的最底端。<br>所有元素均可拥有子元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;root&gt;</div><div class="line">  &lt;child&gt;</div><div class="line">    &lt;subchild&gt;.....&lt;/subchild&gt;</div><div class="line">  &lt;/child&gt;</div><div class="line">&lt;/root&gt;</div></pre></td></tr></table></figure></p>
+<p>父、子以及同胞等术语用于描述元素之间的关系。父元素拥有子元素。相同层级上的子元素成为同胞（兄弟或姐妹）。<br>所有元素均可拥有文本内容和属性（类似 HTML 中）。  </p>
+<p>实例<br><img src="XML简介/xml-2.gif" alt="logo"> </p>
+<p>上图表示下面的 XML 中的一本书：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;bookstore&gt;</div><div class="line">&lt;book category=&quot;COOKING&quot;&gt;</div><div class="line">  &lt;title lang=&quot;en&quot;&gt;Everyday Italian&lt;/title&gt; </div><div class="line">  &lt;author&gt;Giada De Laurentiis&lt;/author&gt; </div><div class="line">  &lt;year&gt;2005&lt;/year&gt; </div><div class="line">  &lt;price&gt;30.00&lt;/price&gt; </div><div class="line">&lt;/book&gt;</div><div class="line">&lt;book category=&quot;CHILDREN&quot;&gt;</div><div class="line">  &lt;title lang=&quot;en&quot;&gt;Harry Potter&lt;/title&gt; </div><div class="line">  &lt;author&gt;J K. Rowling&lt;/author&gt; </div><div class="line">  &lt;year&gt;2005&lt;/year&gt; </div><div class="line">  &lt;price&gt;29.99&lt;/price&gt; </div><div class="line">&lt;/book&gt;</div><div class="line">&lt;book category=&quot;WEB&quot;&gt;</div><div class="line">  &lt;title lang=&quot;en&quot;&gt;Learning XML&lt;/title&gt; </div><div class="line">  &lt;author&gt;Erik T. Ray&lt;/author&gt; </div><div class="line">  &lt;year&gt;2003&lt;/year&gt; </div><div class="line">  &lt;price&gt;39.95&lt;/price&gt; </div><div class="line">&lt;/book&gt;</div><div class="line">&lt;/bookstore&gt;</div></pre></td></tr></table></figure></p>
+<p>例子中的根元素是 <bookstore>。文档中的所有 <book> 元素都被包含在 <bookstore> 中。  </bookstore></book></bookstore></p>
+<p><book> 元素有 4 个子元素：<title>、&lt; author&gt;、<year>、<price>。  </price></year></title></book></p>
+<hr>
+<h2 id="XML-语法规则"><a href="#XML-语法规则" class="headerlink" title="XML 语法规则"></a>XML 语法规则</h2><p>XML 的语法规则很简单，且很有逻辑。这些规则很容易学习，也很容易使用。<br>所有 XML 元素都须有关闭标签<br>在 HTML，经常会看到没有关闭标签的元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;This is a paragraph</div><div class="line">&lt;p&gt;This is another paragraph</div></pre></td></tr></table></figure></p>
+<p>在 XML 中，省略关闭标签是非法的。所有元素都必须有关闭标签：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;This is a paragraph&lt;/p&gt;</div><div class="line">&lt;p&gt;This is another paragraph&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<p>XML 标签对大小写敏感<br>XML 元素使用 XML 标签进行定义。<br>XML 标签对大小写敏感。在 XML 中，标签 <letter> 与标签 <letter> 是不同的。<br>必须使用相同的大小写来编写打开标签和关闭标签：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Message&gt;这是错误的。&lt;/message&gt;</div><div class="line"></div><div class="line">&lt;message&gt;这是正确的。&lt;/message&gt;</div></pre></td></tr></table></figure></letter></letter></p>
+<p>XML 必须正确地嵌套<br>在 HTML 中，常会看到没有正确嵌套的元素：<br><code>&lt;b&gt;&lt;i&gt;This text is bold and italic&lt;/b&gt;&lt;/i&gt;</code><br>在 XML 中，所有元素都必须彼此正确地嵌套：<br><code>&lt;b&gt;&lt;i&gt;This text is bold and italic&lt;/i&gt;&lt;/b&gt;</code><br>在上例中，正确嵌套的意思是：由于 <i> 元素是在 <b>   元素内打开的，那么它必须在 <b> 元素内关闭。  </b></b></i></p>
+<p>XML 文档必须有根元素<br>XML 文档必须有一个元素是所有其他元素的父元素。该元素称为根元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;root&gt;</div><div class="line">  &lt;child&gt;</div><div class="line">    &lt;subchild&gt;.....&lt;/subchild&gt;</div><div class="line">  &lt;/child&gt;</div><div class="line">&lt;/root&gt;</div></pre></td></tr></table></figure></p>
+<p>XML 的属性值须加引号<br>与 HTML 类似，XML 也可拥有属性（名称/值的对）。<br>在 XML 中，XML 的属性值须加引号。请研究下面的两个 XML 文档。第一个是错误的，第二个是正确的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;note date=08/08/2008&gt;</div><div class="line">&lt;to&gt;George&lt;/to&gt;</div><div class="line">&lt;from&gt;John&lt;/from&gt;</div><div class="line">&lt;/note&gt; </div><div class="line">&lt;note date=&quot;08/08/2008&quot;&gt;</div><div class="line">&lt;to&gt;George&lt;/to&gt;</div><div class="line">&lt;from&gt;John&lt;/from&gt;</div><div class="line">&lt;/note&gt;</div></pre></td></tr></table></figure></p>
+<p>在第一个文档中的错误是，note 元素中的 date 属性没有加引号。 </p>
+<p>实体引用<br>在 XML 中，一些字符拥有特殊的意义。<br>如果你把字符 “&lt;” 放在 XML 元素中，会发生错误，这是因为解析器会把它当作新元素的开始。<br>这样会产生 XML 错误：<br><code>&lt;message&gt;if salary &lt; 1000 then&lt;/message&gt;</code><br>为了避免这个错误，请用实体引用来代替 “&lt;” 字符：<br><code>&lt;message&gt;if salary &amp;lt; 1000 then&lt;/message&gt;</code><br>在 XML 中，有 5 个预定义的实体引用：<br><img src="XML简介/xml-3.png" alt="logo"></p>
+<p>注释：在 XML 中，只有字符 “&lt;” 和 “&amp;” 确实是非法的。大于号是合法的，但是用实体引用来代替它是一个好习惯。  </p>
+<p>XML 中的注释<br>在 XML 中编写注释的语法与 HTML 的语法很相似：<br><code>&lt;!-- This is a comment --&gt;</code>   </p>
+<p>在 XML 中，空格会被保留<br>HTML 会把多个连续的空格字符裁减（合并）为一个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">HTML:	Hello           my name is David.</div><div class="line">输出:	Hello my name is David.</div></pre></td></tr></table></figure></p>
+<p>在 XML 中，文档中的空格不会被删节。  </p>
+<hr>
+<h2 id="XML元素"><a href="#XML元素" class="headerlink" title="XML元素"></a>XML元素</h2><p>XML 文档包含 XML 元素。<br>什么是 XML 元素？<br>XML 元素指的是从（且包括）开始标签直到（且包括）结束标签的部分。<br>元素可包含其他元素、文本或者两者的混合物。元素也可以拥有属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;bookstore&gt;</div><div class="line">&lt;book category=&quot;CHILDREN&quot;&gt;</div><div class="line">  &lt;title&gt;Harry Potter&lt;/title&gt; </div><div class="line">  &lt;author&gt;J K. Rowling&lt;/author&gt; </div><div class="line">  &lt;year&gt;2005&lt;/year&gt; </div><div class="line">  &lt;price&gt;29.99&lt;/price&gt; </div><div class="line">&lt;/book&gt;</div><div class="line">&lt;book category=&quot;WEB&quot;&gt;</div><div class="line">  &lt;title&gt;Learning XML&lt;/title&gt; </div><div class="line">  &lt;author&gt;Erik T. Ray&lt;/author&gt; </div><div class="line">  &lt;year&gt;2003&lt;/year&gt; </div><div class="line">  &lt;price&gt;39.95&lt;/price&gt; </div><div class="line">&lt;/book&gt;</div><div class="line">&lt;/bookstore&gt;</div></pre></td></tr></table></figure></p>
+<p>在上例中，<bookstore> 和 <book> 都拥有元素内容，因为它们包含了其他元素。<author> 只有文本内容，因为它仅包含文本。<br>在上例中，只有 <book> 元素拥有属性 (category=”CHILDREN”)。</book></author></book></bookstore></p>
+<p>XML 命名规则<br>XML 元素必须遵循以下命名规则：</p>
+<ol>
+<li>名称可以含字母、数字以及其他的字符</li>
+<li>名称不能以数字或者标点符号开始</li>
+<li>名称不能以字符 “xml”（或者 XML、Xml）开始</li>
+<li>名称不能包含空格  </li>
+</ol>
+<p>可使用任何名称，没有保留的字词。  </p>
+<p>最佳命名习惯<br>使名称具有描述性。使用下划线的名称也很不错。<br>名称应当比较简短，比如：<book_title>，而不是：<the_title_of_the_book>。<br>避免 “-“ 字符。如果您按照这样的方式进行命名：”first-name”，一些软件会认为你需要提取第一个单词。<br>避免 “.” 字符。如果您按照这样的方式进行命名：”first.name”，一些软件会认为 “name” 是对象 “first” 的属性。<br>避免 “:” 字符。冒号会被转换为命名空间来使用（稍后介绍）。<br>XML 文档经常有一个对应的数据库，其中的字段会对应 XML 文档中的元素。有一个实用的经验，即使用数据库的名称规则来命名 XML 文档中的元素。<br>非英语的字母比如 éòá 也是合法的 XML 元素名，不过需要留意当软件开发商不支持这些字符时可能出现的问题。  </the_title_of_the_book></book_title></p>
+<p>XML 元素是可扩展的<br>XML 元素是可扩展，以携带更多的信息。<br>请看下面这个 XML 例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;note&gt;</div><div class="line">&lt;to&gt;George&lt;/to&gt;</div><div class="line">&lt;from&gt;John&lt;/from&gt;</div><div class="line">&lt;body&gt;Don&apos;t forget the meeting!&lt;/body&gt;</div><div class="line">&lt;/note&gt;</div></pre></td></tr></table></figure></p>
+<p>让我们设想一下，我们创建了一个应用程序，可将 <to>、<from> 以及 <body> 元素提取出来，并产生以下的输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">MESSAGE</div><div class="line">To: George</div><div class="line">From: John</div><div class="line"></div><div class="line">Don&apos;t forget the meeting!</div></pre></td></tr></table></figure></body></from></to></p>
+<p>想象一下，之后这个 XML 文档作者又向这个文档添加了一些额外的信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;note&gt;</div><div class="line">&lt;date&gt;2008-08-08&lt;/date&gt;</div><div class="line">&lt;to&gt;George&lt;/to&gt;</div><div class="line">&lt;from&gt;John&lt;/from&gt;</div><div class="line">&lt;heading&gt;Reminder&lt;/heading&gt;</div><div class="line">&lt;body&gt;Don&apos;t forget the meeting!&lt;/body&gt;</div><div class="line">&lt;/note&gt;</div></pre></td></tr></table></figure></p>
+<p>那么这个应用程序会中断或崩溃吗？<br>不会。这个应用程序仍然可以找到 XML 文档中的 <to>、<from> 以及 <body> 元素，并产生同样的输出。<br>XML 的优势之一，就是可以经常在不中断应用程序的情况进行扩展。  </body></from></to></p>
+<hr>
+<h2 id="XML-属性"><a href="#XML-属性" class="headerlink" title="XML 属性"></a>XML 属性</h2><p>XML 元素可以在开始标签中包含属性，类似 HTML。<br>属性 (Attribute) 提供关于元素的额外（附加）信息。  </p>
+<p>XML 属性<br>从 HTML，你会回忆起这个：<code>&lt;img src=&quot;computer.gif&quot;&gt;</code>。”src” 属性提供有关 <img> 元素的额外信息。<br>在 HTML 中（以及在 XML 中），属性提供有关元素的额外信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;computer.gif&quot;&gt;</div><div class="line">&lt;a href=&quot;demo.asp&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>属性通常提供不属于数据组成部分的信息。在下面的例子中，文件类型与数据无关，但是对需要处理这个元素的软件来说却很重要：<br><code>&lt;file type=&quot;gif&quot;&gt;computer.gif&lt;/file&gt;</code></p>
+<p>XML 属性必须加引号<br>属性值必须被引号包围，不过单引号和双引号均可使用。比如一个人的性别，person 标签可以这样写：<br><code>&lt;person sex=&quot;female&quot;&gt;</code><br>或者这样也可以：<br><code>&lt;person sex=&#39;female&#39;&gt;</code><br>注释：如果属性值本身包含双引号，那么有必要使用单引号包围它，就像这个例子：<br><code>&lt;gangster name=&#39;George &quot;Shotgun&quot; Ziegler&#39;&gt;</code><br>或者可以使用实体引用：<br><code>&lt;gangster name=&quot;George &amp;quot;Shotgun&amp;quot; Ziegler&quot;&gt;</code>  </p>
+<p>XML 元素 vs. 属性<br>请看这些例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;person sex=&quot;female&quot;&gt;</div><div class="line">  &lt;firstname&gt;Anna&lt;/firstname&gt;</div><div class="line">  &lt;lastname&gt;Smith&lt;/lastname&gt;</div><div class="line">&lt;/person&gt; </div><div class="line"></div><div class="line">&lt;person&gt;</div><div class="line">  &lt;sex&gt;female&lt;/sex&gt;</div><div class="line">  &lt;firstname&gt;Anna&lt;/firstname&gt;</div><div class="line">  &lt;lastname&gt;Smith&lt;/lastname&gt;</div><div class="line">&lt;/person&gt;</div></pre></td></tr></table></figure></p>
+<p>在第一个例子中，sex 是一个属性。在第二个例子中，sex 则是一个子元素。两个例子均可提供相同的信息。<br>没有什么规矩可以告诉我们什么时候该使用属性，而什么时候该使用子元素。我的经验是在 HTML 中，属性用起来很便利，但是在 XML 中，您应该尽量避免使用属性。如果信息感觉起来很像数据，那么请使用子元素吧。  </p>
+<p>我最喜欢的方式<br>下面的三个 XML 文档包含完全相同的信息：<br>第一个例子中使用了 date 属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;note date=&quot;08/08/2008&quot;&gt;</div><div class="line">&lt;to&gt;George&lt;/to&gt;</div><div class="line">&lt;from&gt;John&lt;/from&gt;</div><div class="line">&lt;heading&gt;Reminder&lt;/heading&gt;</div><div class="line">&lt;body&gt;Don&apos;t forget the meeting!&lt;/body&gt;</div><div class="line">&lt;/note&gt;</div></pre></td></tr></table></figure></p>
+<p>第二个例子中使用了 date 元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;note&gt;</div><div class="line">&lt;date&gt;08/08/2008&lt;/date&gt;</div><div class="line">&lt;to&gt;George&lt;/to&gt;</div><div class="line">&lt;from&gt;John&lt;/from&gt;</div><div class="line">&lt;heading&gt;Reminder&lt;/heading&gt;</div><div class="line">&lt;body&gt;Don&apos;t forget the meeting!&lt;/body&gt;</div><div class="line">&lt;/note&gt;</div></pre></td></tr></table></figure></p>
+<p>第三个例子中使用了扩展的 date 元素（这是我的最爱）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;note&gt;</div><div class="line">&lt;date&gt;</div><div class="line">  &lt;day&gt;08&lt;/day&gt;</div><div class="line">  &lt;month&gt;08&lt;/month&gt;</div><div class="line">  &lt;year&gt;2008&lt;/year&gt;</div><div class="line">&lt;/date&gt;</div><div class="line">&lt;to&gt;George&lt;/to&gt;</div><div class="line">&lt;from&gt;John&lt;/from&gt;</div><div class="line">&lt;heading&gt;Reminder&lt;/heading&gt;</div><div class="line">&lt;body&gt;Don&apos;t forget the meeting!&lt;/body&gt;</div><div class="line">&lt;/note&gt;</div></pre></td></tr></table></figure></p>
+<p>以上内容摘自 <a href="http://www.w3school.com.cn/xml/index.asp" target="_blank" rel="external">http://www.w3school.com.cn/xml/index.asp</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-19T02:29:02.518Z" itemprop="dateUpdated">2017年1月19日 10:29</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/01/18/XML简介/" target="_blank" rel="external">http://liuzhe6.github.io/2017/01/18/XML简介/</a>
+    </div>
+    <footer>
+        <a href="http://liuzhe6.github.io">
+            <img src="/img/avatar.png" alt="刘哲">
+            刘哲
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XML/">XML</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/18/XML简介/&title=《XML简介》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/18/XML简介/&title=《XML简介》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/18/XML简介/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《XML简介》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/18/XML简介/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/18/XML简介/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/19/Android将数据存储到文件中/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Android将数据存储到文件中</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/18/jstl简介/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">jstl简介</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="XML简介" data-title="XML简介" data-url="http://liuzhe6.github.io/2017/01/18/XML简介/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>A Coder's Blog &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/18/XML简介/&title=《XML简介》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/18/XML简介/&title=《XML简介》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/18/XML简介/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《XML简介》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/18/XML简介/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/18/XML简介/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNElEQVR42u3aW26DUAxF0cx/0vS3UpLLPvZNWszmKyIUWIrk+vV44OP4dTyff3fl87fru72757ZDhgwZl2Ucy2N9za6npM998XQZMmTcgLEOfOtQ++7BaxIJ00FQliFDhgycFJJQy19dhgwZMmoMHkzXgXV9RoYMGTJqRWynoCVp35dqcRkyZFyQwZtl3//8kfmGDBkyLsXoNOvJwDJNBItvJUOGjNEMHuB4isabbukdTtY1ZMiQMZQRB7WwPZcuh5EzrdRQhgwZF2TEzfd2AO0MAE54MmTIGMrgJSgvPvkdOsEabXPIkCFjHKMzJCCLX7tWK05msDJkyBjHSF+OLEOkyxYklSyWsjJkyBjBqL0WJ/HRZi3re1HEypAhYxwjTdfSBhx/lc6ShwwZMmYzSBONN+jTwWfavCv+DjJkyLg4Ix1PksqRP6xW1vLVMRkyZExidMaTnUUx8sRtGa4MGTIGMfi4sZbe8fULXjbLkCHjDow0HUxLynSlozXUlCFDxmhGmsDVSs004ePtPBkyZMxm1NI1tAARdsPSsH6S4cqQIWMcY9fqwycGnKjBJ0OGjNswOm0yUqbywUBcDMuQIWMo4wiPdCRQa/3HVBkyZIxm8KMG3jsWTdfOZMiQMYnRKVnTVHJX+ihDhox7MtZJWydEpmdqSBkyZMjoBN/0yvQ+MmTIkFELuHyljCeLf/B/Q4YMGf+MwRtnnW/T8BqMM2XIkDGawf+s9rkVRvEdZMiQMZTxA0GfQc/3hgQ5AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.7" async></script>
+
+
+
+
+
+
+
+</body>
+</html>

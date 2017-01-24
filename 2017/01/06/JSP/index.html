@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?Coder6"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>JSP | A Coder&#39;s Blog | 有关计算机的点点滴滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="jsp">
+    <meta name="description" content="JSP简介什么是JSPJSP全名为Java Server Pages，中文名叫java服务器页面，其根本是一个简化的Servlet设计，它[1]  是由Sun Microsystems公司倡导、许多公司参与一起建立的一种动态网页技术标准。JSP技术有点类似ASP技术，它是在传统的网页HTML（标准通用标记语言的子集）文件(.htm,.html)中插入Java程序段(Scriptlet)和JSP标记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSP">
+<meta property="og:url" content="http://liuzhe6.github.io/2017/01/06/JSP/index.html">
+<meta property="og:site_name" content="A Coder's Blog">
+<meta property="og:description" content="JSP简介什么是JSPJSP全名为Java Server Pages，中文名叫java服务器页面，其根本是一个简化的Servlet设计，它[1]  是由Sun Microsystems公司倡导、许多公司参与一起建立的一种动态网页技术标准。JSP技术有点类似ASP技术，它是在传统的网页HTML（标准通用标记语言的子集）文件(.htm,.html)中插入Java程序段(Scriptlet)和JSP标记">
+<meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2014/01/jsp_hello_world.jpg">
+<meta property="og:updated_time" content="2017-01-06T13:10:53.117Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JSP">
+<meta name="twitter:description" content="JSP简介什么是JSPJSP全名为Java Server Pages，中文名叫java服务器页面，其根本是一个简化的Servlet设计，它[1]  是由Sun Microsystems公司倡导、许多公司参与一起建立的一种动态网页技术标准。JSP技术有点类似ASP技术，它是在传统的网页HTML（标准通用标记语言的子集）文件(.htm,.html)中插入Java程序段(Scriptlet)和JSP标记">
+<meta name="twitter:image" content="http://www.runoob.com/wp-content/uploads/2014/01/jsp_hello_world.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">刘哲</h5>
+          <a href="mailto:miuiclub@qq.com" title="miuiclub@qq.com" class="mail">miuiclub@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/LiuZhe6" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/3102110533" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JSP</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JSP</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-06T12:45:24.000Z" itemprop="datePublished" class="page-time">
+  2017-01-06
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JSP简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">JSP简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是JSP"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">什么是JSP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一个JSP"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">第一个JSP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSP语法"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">JSP语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#中文编码问题的解决"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">中文编码问题的解决</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSP表达式"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">JSP表达式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSP注释"><span class="post-toc-number">1.0.6.</span> <span class="post-toc-text">JSP注释</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSP指令"><span class="post-toc-number">1.0.7.</span> <span class="post-toc-text">JSP指令</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-JSP"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JSP</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月06日 20:45" datetime="2017-01-06T12:45:24.000Z"  itemprop="datePublished">2017-01-06</time>
+
+            
+
+
+            
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="JSP简介"><a href="#JSP简介" class="headerlink" title="JSP简介"></a>JSP简介</h1><h3 id="什么是JSP"><a href="#什么是JSP" class="headerlink" title="什么是JSP"></a>什么是JSP</h3><p>JSP全名为Java Server Pages，中文名叫java服务器页面，其根本是一个简化的Servlet设计，它[1]  是由Sun Microsystems公司倡导、许多公司参与一起建立的一种动态网页技术标准。JSP技术有点类似ASP技术，它是在传统的网页HTML（标准通用标记语言的子集）文件(<em>.htm,</em>.html)中插入Java程序段(Scriptlet)和JSP标记(tag)，从而形成JSP文件，后缀名为(*.jsp)。 用JSP开发的Web应用是跨平台的，既能在Linux下运行，也能在其他操作系统上运行。</p>
+<p>它实现了Html语法中的java扩展（以 &lt;%, %&gt;形式）。JSP与Servlet一样，是在服务器端执行的。通常返回给客户端的就是一个HTML文本，因此客户端只要有浏览器就能浏览。</p>
+<p>Java Servlet是JSP的技术基础，而且大型的Web应用程序的开发需要Java Servlet和JSP配合才能完成。JSP具备了Java技术的简单易用，完全的面向对象，具有平台无关性且安全可靠，主要面向因特网的所有特点。</p>
+<p>(详细介绍请查阅相关资料  这里就不一一介绍了)</p>
+<hr>
+<h3 id="第一个JSP"><a href="#第一个JSP" class="headerlink" title="第一个JSP"></a>第一个JSP</h3><p>第一个JSP程序<br>语言学习入门的第一个程序一般都是输出”Hello World！”，JSP输出”Hello World！”代码如下所示:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">           &lt;title&gt;第一个JSP程序&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">           &lt;%</div><div class="line">                  out.println(&quot;Hello World！&quot;);</div><div class="line">           %&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="JSP语法"><a href="#JSP语法" class="headerlink" title="JSP语法"></a>JSP语法</h3><p>脚本程序<br>脚本程序可以包含任意量的Java语句、变量、方法或表达式，只要它们在脚本语言中是有效的。<br>脚本程序的语法格式：<br>&lt;% 代码片段 %&gt;<br>或者，您也可以编写与其等价的XML语句，就像下面这样：  </p>
+<p><jsp:scriptlet><br>   代码片段<br></jsp:scriptlet><br>任何文本、HTML标签、JSP元素必须写在脚本程序的外面。<br>下面给出一个示例，同时也是本教程的第一个JSP示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;&lt;title&gt;Hello World&lt;/title&gt;&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">Hello World!&lt;br/&gt;</div><div class="line">&lt;%</div><div class="line">out.println(&quot;Your IP address is &quot; + request.getRemoteAddr());</div><div class="line">%&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p><img src="http://www.runoob.com/wp-content/uploads/2014/01/jsp_hello_world.jpg" alt="image"></p>
+<hr>
+<h3 id="中文编码问题的解决"><a href="#中文编码问题的解决" class="headerlink" title="中文编码问题的解决"></a>中文编码问题的解决</h3><p>如果我们要在页面正常显示中文，我们需要在 JSP 文件头部添加以下代码：&lt;&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</div><div class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</div></pre></td></tr></table></figure></p>
+<p>接下来我们将以上程序修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</div><div class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">Hello World!&lt;br/&gt;</div><div class="line">&lt;%</div><div class="line">out.println(&quot;你的 IP 地址 &quot; + request.getRemoteAddr());</div><div class="line">%&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>这样中文就可以正常显示了。  </p>
+<hr>
+<h3 id="JSP表达式"><a href="#JSP表达式" class="headerlink" title="JSP表达式"></a>JSP表达式</h3><p>一个JSP表达式中包含的脚本语言表达式，先被转化成String，然后插入到表达式出现的地方。<br>由于表达式的值会被转化成String，所以您可以在一个文本行中使用表达式而不用去管它是否是HTML标签。<br>表达式元素中可以包含任何符合Java语言规范的表达式，但是不能使用分号来结束表达式。<br>JSP表达式的语法格式：<br><code>&lt;%= 表达式 %&gt;</code><br>程序示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</div><div class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;p&gt;</div><div class="line">   今天的日期是: &lt;%= (new java.util.Date()).toLocaleString()%&gt;</div><div class="line">&lt;/p&gt;</div><div class="line">&lt;/body&gt; </div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="JSP注释"><a href="#JSP注释" class="headerlink" title="JSP注释"></a>JSP注释</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</div><div class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">&lt;title&gt;菜鸟教程(runoob.com)&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;%-- 该部分注释在网页中不会被显示--%&gt; </div><div class="line">&lt;p&gt;</div><div class="line">   今天的日期是: &lt;%= (new java.util.Date()).toLocaleString()%&gt;</div><div class="line">&lt;/p&gt;</div><div class="line">&lt;/body&gt; </div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>运行后得到以下结果：<br><code>今天的日期是: 2017-1-6 20:39:30</code><br>不同情况下使用注释的语法规则：  </p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;%– 注释 –%&gt;</td>
+<td style="text-align:center">JSP注释，注释内容不会被发送至浏览器甚至不会被编译</td>
+</tr>
+<tr>
+<td><!-- 注释 --></td>
+<td style="text-align:center">HTML注释，通过浏览器查看网页源代码时可以看见注释内容</td>
+</tr>
+<tr>
+<td>&lt;\%</td>
+<td style="text-align:center">代表静态 &lt;%常量</td>
+</tr>
+<tr>
+<td>%></td>
+<td style="text-align:center">代表静态 %&gt; 常量</td>
+</tr>
+<tr>
+<td>\’</td>
+<td style="text-align:center">在属性中使用的单引号</td>
+</tr>
+<tr>
+<td>\”</td>
+<td style="text-align:center">在属性中使用的双引号</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="JSP指令"><a href="#JSP指令" class="headerlink" title="JSP指令"></a>JSP指令</h3><p>JSP指令用来设置与整个JSP页面相关的属性。<br>JSP指令语法格式：<br><code>&lt;%@ directive attribute=&quot;value&quot; %&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;%@ page … %&gt;</td>
+<td>定义页面的依赖属性，比如脚本语言、error页面、缓存需求等等</td>
+</tr>
+<tr>
+<td>&lt;%@ include … %&gt;</td>
+<td>包含其他文件</td>
+</tr>
+<tr>
+<td>&lt;%@ taglib … %&gt;</td>
+<td>引入标签库的定义，可以是自定义标签</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-06T13:10:53.117Z" itemprop="dateUpdated">2017年1月6日 21:10</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/01/06/JSP/" target="_blank" rel="external">http://liuzhe6.github.io/2017/01/06/JSP/</a>
+    </div>
+    <footer>
+        <a href="http://liuzhe6.github.io">
+            <img src="/img/avatar.png" alt="刘哲">
+            刘哲
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/06/JSP/&title=《JSP》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/06/JSP/&title=《JSP》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/06/JSP/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JSP》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/06/JSP/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/06/JSP/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/06/JavaScript/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/08/06/jsp使用项目路径之外的图片方法/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">jsp使用项目路径之外的图片方法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="JSP" data-title="JSP" data-url="http://liuzhe6.github.io/2017/01/06/JSP/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>A Coder's Blog &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/06/JSP/&title=《JSP》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/06/JSP/&title=《JSP》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/06/JSP/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JSP》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/06/JSP/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/06/JSP/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxklEQVR42u3ayw7DIAxE0fz/T9NtpTbOjI1dVF1WVRrBIQvkB9clj/U24uef78RzXh0DLly4Ze4KR/zO58J3W7qbRzfAhQt3nhsfNPoRFj/X5799Dhcu3CO5Lj0+zuDChfsfXD3oiWeGCxfu+Vw9vdEXdtOnzbkaXLhwC1y3uNnxu6W+Cxcu3BR3mcMtgOoFFGl1uHDhjnD1A8VNZvSzyF4XLly4zVw3vVHQ7gaMLcGFC3eEW2mE5EoklasYcOHCnee6TZRKkqOnQF8McOHCHefqoYzRFg3/jVeU4jK4cOE2cHe1Ud12ae7aB1y4cLu5erCyq/CRa9s8FEzhwoXbwNWDEjexcT/Ew2xw4cId57ppj13oLBdW4MKFO8PVe5e5sql72cIossCFC7eZK1VNcrWWVEHWru/ChQu3jauHI+5FDfdzSE1WuHDh/oibK6EmIyz9Hbhw4TZzlzncZEmfQQqt4MKFO8Ld1Ry1y53yIZjcDFy4cMtcnXI3de6oyhVk4cKFO8l1D5pcy2RbrgYXLtwjubmQKD7CjIwNLly4B3PdVuu2VgpcuHBHuLnrmG5rdkPRBC5cuCNcPWTRQQqlviW4cOE2cF/eaXGw4kinhwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.7" async></script>
+
+
+
+
+
+
+
+</body>
+</html>

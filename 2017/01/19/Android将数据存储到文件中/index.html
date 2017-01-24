@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?Coder6"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Android将数据存储到文件中 | A Coder&#39;s Blog | 有关计算机的点点滴滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Android,数据存储">
+    <meta name="description" content="Android开发中存储文件文件默认存储位置为 /data/data//files/目录下的主要有两种模式可选，MODE_PRIVATE和MODE_APPEND。MODE_PRIVATE：是默认操作模式，表示当指定同样文件名的时候，所写的内容会覆盖原文件中的内容。MODE_APPEND：表示如果该文件已经存在，就往文件里面追加内容，不存在就创建新文件。
+下面是一段简单的代码示例：```public">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android将数据存储到文件中">
+<meta property="og:url" content="http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/index.html">
+<meta property="og:site_name" content="A Coder's Blog">
+<meta property="og:description" content="Android开发中存储文件文件默认存储位置为 /data/data//files/目录下的主要有两种模式可选，MODE_PRIVATE和MODE_APPEND。MODE_PRIVATE：是默认操作模式，表示当指定同样文件名的时候，所写的内容会覆盖原文件中的内容。MODE_APPEND：表示如果该文件已经存在，就往文件里面追加内容，不存在就创建新文件。
+下面是一段简单的代码示例：```public">
+<meta property="og:updated_time" content="2017-01-19T02:28:59.296Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android将数据存储到文件中">
+<meta name="twitter:description" content="Android开发中存储文件文件默认存储位置为 /data/data//files/目录下的主要有两种模式可选，MODE_PRIVATE和MODE_APPEND。MODE_PRIVATE：是默认操作模式，表示当指定同样文件名的时候，所写的内容会覆盖原文件中的内容。MODE_APPEND：表示如果该文件已经存在，就往文件里面追加内容，不存在就创建新文件。
+下面是一段简单的代码示例：```public">
+    
+        <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">刘哲</h5>
+          <a href="mailto:miuiclub@qq.com" title="miuiclub@qq.com" class="mail">miuiclub@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/LiuZhe6" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/3102110533" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Android将数据存储到文件中</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Android将数据存储到文件中</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-19T02:27:48.000Z" itemprop="datePublished" class="page-time">
+  2017-01-19
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android开发中存储文件"><span class="post-toc-number">1.</span> <span class="post-toc-text">Android开发中存储文件</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Android将数据存储到文件中"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Android将数据存储到文件中</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月19日 10:27" datetime="2017-01-19T02:27:48.000Z"  itemprop="datePublished">2017-01-19</time>
+
+            
+
+
+            
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Android开发中存储文件"><a href="#Android开发中存储文件" class="headerlink" title="Android开发中存储文件"></a>Android开发中存储文件</h1><p>文件默认存储位置为 /data/data/<package name="">/files/目录下的<br>主要有两种模式可选，MODE_PRIVATE和MODE_APPEND。<br>MODE_PRIVATE：是默认操作模式，表示当指定同样文件名的时候，所写的内容会覆盖原文件中的内容。<br>MODE_APPEND：表示如果该文件已经存在，就往文件里面追加内容，不存在就创建新文件。</package></p>
+<p>下面是一段简单的代码示例：<br>```<br>public void save(){<br>    String data = “Data to save”;<br>    FileOutputStream out = null;<br>    BufferedWriter writer = null;<br>    try{<br>        out = openFileOutput(“data”, Context.MODE_PRIVATE);<br>        writer = new BufferedWriter(new OutputStreamWriter(out));<br>        writer.write(data);<br>    } catch (IOException e){<br>        e.printStackTrace();<br>    } finally {<br>        try{<br>            if (writer != null){<br>                writer.close();<br>            }<br>        } catch (IOException e) {<br>            e.printStackTrace();<br>        }<br>    }<br>}</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-19T02:28:59.296Z" itemprop="dateUpdated">2017年1月19日 10:28</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/01/19/Android将数据存储到文件中/" target="_blank" rel="external">http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/</a>
+    </div>
+    <footer>
+        <a href="http://liuzhe6.github.io">
+            <img src="/img/avatar.png" alt="刘哲">
+            刘哲
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据存储/">数据存储</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/&title=《Android将数据存储到文件中》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/&title=《Android将数据存储到文件中》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Android将数据存储到文件中》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/18/XML简介/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">XML简介</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="Android将数据存储到文件中" data-title="Android将数据存储到文件中" data-url="http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>A Coder's Blog &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/&title=《Android将数据存储到文件中》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/&title=《Android将数据存储到文件中》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Android将数据存储到文件中》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACwUlEQVR42u3a22ojMRAEUP//T2dhn7KY2FXd0iaBM09mfBkdGdRNSY9HfH38vV7fad/9/JnnO8/3X//m6sLDw8MbDf2r63m4ycNefzcfT3LnzRTg4eHhXePlQ3z9mWQo7VNm48HDw8P7CbykbMwa7vYOHh4e3m/hzRKAzaLftuZ4eHh4/5OXLP15AWiLTTIp17MWPDw8vJjXboD9hNcX9/fw8PDwFrvq+eK7Wb7bwLcYIR4eHt4FXn4UIG+X27Y4b7hnMQceHh7ebV6+rO8PpM6mtS1UeHh4eLd57Ub+LPbNJy4vA1FKjYeHh7fmJaSkYOTbV23b3bbyxdkHPDw8vKMloV3QZ2FBMhFJcaqbaTw8PLwFL4lQ84Y7iRXyCGODj2ogHh4e3oJ3I2Btj0zty8mbSAIPDw/vKG8W187qTxs05NP3yP8HPDw8vAWv7rsXD86PJuSHBqJmGg8PD+8aL29h8y3/s6+Tpvmfd/Hw8PAu8PKFfhOn5kt/Xgzy8eDh4eGd5W0a39kRq020Ud/Hw8PDu8DLD1TtD0LN2u59LIKHh4d3g5dv4c/eTTa3Zp+vfwEPDw9vzWuPSW3w7RK/geHh4eHd4+2D13xZb8OITQRc7+Dh4eHhjXjJspuHF3lw0DbW9RTg4eHhXebNQthZxHCqtNQpNR4eHt6aNztuNdvcymOIBF88BQ8PD+8oLykG7XGrdilvW+0iPsbDw8O7xksW2VlbnE9TEpHUx63w8PDwjvI+yivB5zFE2yjXhQEPDw/vAi+/8s2qtnjMguPkKXh4eHj3ePtiEHXu5Wfy77753/Dw8PCu8dpi0G5i5Rtss7b4TSSBh4eH9628tqjM2uVZyPtlS42Hh4f3TbxNqUjC3KRFbqMNPDw8vHu8/IDUqYb41GGCY1kLHh4e3qGtr1kA0bbR7RGEdmrw8PDwDvH+AH3hIhZIqg96AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.7" async></script>
+
+
+
+
+
+
+
+</body>
+</html>

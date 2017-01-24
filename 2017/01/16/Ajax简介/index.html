@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?Coder6"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Ajax简介 | A Coder&#39;s Blog | 有关计算机的点点滴滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Ajax">
+    <meta name="description" content="ajax开发AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ajax简介">
+<meta property="og:url" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/index.html">
+<meta property="og:site_name" content="A Coder's Blog">
+<meta property="og:description" content="ajax开发AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，">
+<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p1.png">
+<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p2.png">
+<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p3.png">
+<meta property="og:updated_time" content="2017-01-18T10:44:42.663Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ajax简介">
+<meta name="twitter:description" content="ajax开发AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，">
+<meta name="twitter:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p1.png">
+    
+        <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">刘哲</h5>
+          <a href="mailto:miuiclub@qq.com" title="miuiclub@qq.com" class="mail">miuiclub@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/LiuZhe6" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/3102110533" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Ajax简介</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Ajax简介</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-16T03:22:53.000Z" itemprop="datePublished" class="page-time">
+  2017-01-16
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ajax开发"><span class="post-toc-number">1.</span> <span class="post-toc-text">ajax开发</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AJAX-创建-XMLHttpRequest-对象"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">AJAX - 创建 XMLHttpRequest 对象</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AJAX-向服务器发送请求"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">AJAX - 向服务器发送请求</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AJAX-服务器响应"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">AJAX - 服务器响应</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Ajax简介"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Ajax简介</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月16日 11:22" datetime="2017-01-16T03:22:53.000Z"  itemprop="datePublished">2017-01-16</time>
+
+            
+
+
+            
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="ajax开发"><a href="#ajax开发" class="headerlink" title="ajax开发"></a>ajax开发</h1><p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。<br>AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。<br>AJAX 是一种用于创建快速动态网页的技术。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。  </p>
+<p>摘自百度百科  </p>
+<hr>
+<h2 id="AJAX-创建-XMLHttpRequest-对象"><a href="#AJAX-创建-XMLHttpRequest-对象" class="headerlink" title="AJAX - 创建 XMLHttpRequest 对象"></a>AJAX - 创建 XMLHttpRequest 对象</h2><p>XMLHttpRequest 是 AJAX 的基础。<br>XMLHttpRequest 对象<br>所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。<br>XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>创建 XMLHttpRequest 对象<br>所有现代浏览器（IE7+、Firefox、Chrome、Safari 以及 Opera）均内建 XMLHttpRequest 对象。<br>创建 XMLHttpRequest 对象的语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variable=new XMLHttpRequest();</div></pre></td></tr></table></figure></p>
+<p>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variable=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div></pre></td></tr></table></figure></p>
+<p>为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var xmlhttp;  </div><div class="line">if (window.XMLHttpRequest)</div><div class="line">  &#123;// code for IE7+, Firefox, Chrome, Opera, Safari</div><div class="line">  xmlhttp=new XMLHttpRequest();</div><div class="line">  &#125;</div><div class="line">else</div><div class="line">  &#123;// code for IE6, IE5</div><div class="line">  xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="AJAX-向服务器发送请求"><a href="#AJAX-向服务器发送请求" class="headerlink" title="AJAX - 向服务器发送请求"></a>AJAX - 向服务器发送请求</h2><p>XMLHttpRequest 对象用于和服务器交换数据。<br>向服务器发送请求<br>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send()   方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="Ajax简介\ajax-p1.png" alt="logo" title="">
+                </div>
+                <div class="image-caption">logo</div>
+            </figure>  
+<hr>
+<p>GET 还是 POST？<br>与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。<br>然而，在以下情况中，请使用 POST 请求：  </p>
+<ol>
+<li>无法使用缓存文件（更新服务器上的文件或数据库）</li>
+<li>向服务器发送大量数据（POST 没有数据量限制）</li>
+<li>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</li>
+</ol>
+<hr>
+<p>GET 请求<br>一个简单的 GET 请求：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;demo_get.asp&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
+<hr>
+<p>在上面的例子中，您可能得到的是缓存的结果。<br>为了避免这种情况，请向 URL 添加一个唯一的 ID：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;demo_get.asp?t=&quot; + Math.random(),true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
+<hr>
+<p>如果您希望通过 GET 方法发送信息，请向 URL 添加信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;demo_get2.asp?fname=Bill&amp;lname=Gates&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
+<hr>
+<p>POST 请求<br>一个简单 POST 请求：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;POST&quot;,&quot;demo_post.asp&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
+<hr>
+<p>如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;POST&quot;,&quot;ajax_test.asp&quot;,true);</div><div class="line">xmlhttp.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);</div><div class="line">xmlhttp.send(&quot;fname=Bill&amp;lname=Gates&quot;);</div></pre></td></tr></table></figure></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="Ajax简介\ajax-p2.png" alt="logo" title="">
+                </div>
+                <div class="image-caption">logo</div>
+            </figure>
+<hr>
+<p>url - 服务器上的文件<br>open() 方法的 url 参数是服务器上文件的地址：<br><code>xmlhttp.open(&quot;GET&quot;,&quot;ajax_test.asp&quot;,true);</code><br>该文件可以是任何类型的文件，比如 .txt 和 .xml，或者服务器脚本文件，比如 .asp 和 .php （在传回响应之前，能够在服务器上执行任务）。</p>
+<hr>
+<p>异步 - True 或 False？<br>AJAX 指的是异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。<br>XMLHttpRequest 对象如果要用于 AJAX 的话，其 open() 方法的 async   参数必须设置为 true：<br><code>xmlhttp.open(&quot;GET&quot;,&quot;ajax_test.asp&quot;,true);</code><br>对于 web 开发人员来说，发送异步请求是一个巨大的进步。很多在服务器执行的任务都相当费时。AJAX 出现之前，这可能会引起应用程序挂起或停止。<br>通过 AJAX，JavaScript 无需等待服务器的响应，而是：  </p>
+<ol>
+<li>在等待服务器响应时执行其他脚本</li>
+<li>当响应就绪后对响应进行处理</li>
+</ol>
+<hr>
+<p>Async = true<br>当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">xmlhttp.onreadystatechange=function()</div><div class="line">  &#123;</div><div class="line">  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)</div><div class="line">    &#123;</div><div class="line">    document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
+<hr>
+<p>Async = false<br>如需使用 async=false，请将 open() 方法中的第三个参数改为 false：<br><code>xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,false);</code><br>我们不推荐使用 async=false，但是对于一些小型的请求，也是可以的。<br>请记住，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。<br>注释：当您使用 async=false 时，请不要编写 <code>onreadystatechange</code> 函数 -   把代码放到 send() 语句后面即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,false);</div><div class="line">xmlhttp.send();</div><div class="line">document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="AJAX-服务器响应"><a href="#AJAX-服务器响应" class="headerlink" title="AJAX - 服务器响应"></a>AJAX - 服务器响应</h2><p>服务器响应<br>如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。<br><img src="Ajax简介\ajax-p3.png" alt="logo"></p>
+<hr>
+<p>responseText 属性<br>如果来自服务器的响应并非 XML，请使用 responseText 属性。<br>responseText 属性返回字符串形式的响应，因此您可以这样使用：<br><code>document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</code></p>
+<hr>
+<p>responseXML 属性<br>如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用   responseXML 属性：<br>请求 books.xml 文件，并解析响应：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">xmlDoc=xmlhttp.responseXML;</div><div class="line">txt=&quot;&quot;;</div><div class="line">x=xmlDoc.getElementsByTagName(&quot;ARTIST&quot;);</div><div class="line">for (i=0;i&lt;x.length;i++)</div><div class="line">  &#123;</div><div class="line">  txt=txt + x[i].childNodes[0].nodeValue + &quot;&lt;br /&gt;&quot;;</div><div class="line">  &#125;</div><div class="line">document.getElementById(&quot;myDiv&quot;).innerHTML=txt;</div></pre></td></tr></table></figure>
+<p>以上内容来自 WSchool <a href="http://www.w3school.com.cn/ajax/ajax_xmlhttprequest_response.asp" target="_blank" rel="external">点击</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-18T10:44:42.663Z" itemprop="dateUpdated">2017年1月18日 18:44</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/01/16/Ajax简介/" target="_blank" rel="external">http://liuzhe6.github.io/2017/01/16/Ajax简介/</a>
+    </div>
+    <footer>
+        <a href="http://liuzhe6.github.io">
+            <img src="/img/avatar.png" alt="刘哲">
+            刘哲
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&title=《Ajax简介》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&title=《Ajax简介》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/16/Ajax简介/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ajax简介》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/18/jstl简介/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">jstl简介</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/14/idea建立web-service-client时抛出SAXParseException解决办法/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">idea建立web service client时抛出SAXParseException解决办法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="Ajax简介" data-title="Ajax简介" data-url="http://liuzhe6.github.io/2017/01/16/Ajax简介/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>A Coder's Blog &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&title=《Ajax简介》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&title=《Ajax简介》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/01/16/Ajax简介/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ajax简介》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACPUlEQVR42u3aS27DMAxF0ex/0y7QUYHW8n2kgtT01chI00QnA4K/1wuf4/usn8/ev/6cn2f9vxuODBkybss4luf3e8iFan/ln/wHVYYMGQ9g8CB79hOQMFp7BQV0GTJkyAAh72ifVuopQ4YMGcur14Lv5iJZhgwZD2B0gmCn6ZYmmhtqcRkyZNyQsWsw8I7nD8w3ZMiQ8c8YnVKz05LjjTl0HxkyZIxm8AWINEFM002eIKJaXIYMGYMYpCBMh461cMxfuajCZciQMY6Rts946pYuXpDvCupsGTJkDGKQVI+ndLW1sM0LYTJkyBjHWAfQWvjjrf90RIrabTJkyBjHqBWo/XQwHViibREZMmQMZXTSxPV7eOufJ5Fx002GDBnjGOmSRLoY0d/g4imsDBky5jHSNn2tWK2tdARppQwZMoYyaksS/cI1Xa24KK1lyJDxGAZJy/gIs1NdbmixyZAhYxCDh79OWEyTQh6gUe9QhgwZIxi7WvNpGdz/UV48Y5UhQ8ZtGZ1lC/5cGyrwe8qQIWM2Iy1B0/WIXWkiL31lyJAxj5F+UBocefDlq2OnqaEMGTKGMtJ2fJ8aV9i1gYEMGTIGMY7w8PWIWlmbJqAoNsuQIePmjM72QnrR9Lrp6oYMGTJmM3iQTUeY6Zghbc9dNN1kyJAxjpEuQHRCZy2kovpbhgwZMnCSxweWpBmH7ixDhgwZ7SWMtGEXb4vIkCHjAYxauOSDzBqMl7gyZMiYzUgHA++7Si1Ay5AhYzTjC3+/wnjTRnGPAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.7" async></script>
+
+
+
+
+
+
+
+</body>
+</html>

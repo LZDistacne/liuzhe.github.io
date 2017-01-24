@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?Coder6"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>JFinal上传图片及其重命名 | A Coder&#39;s Blog | 有关计算机的点点滴滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JFinal">
+    <meta name="description" content="一、表单处理12345&amp;lt;form action=&amp;quot;applicant/changeInformation&amp;quot; method=&amp;quot;post&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot; &amp;gt;	&amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; /&amp;gt;	&amp;lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JFinal上传图片及其重命名">
+<meta property="og:url" content="http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/index.html">
+<meta property="og:site_name" content="A Coder's Blog">
+<meta property="og:description" content="一、表单处理12345&amp;lt;form action=&amp;quot;applicant/changeInformation&amp;quot; method=&amp;quot;post&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot; &amp;gt;	&amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; /&amp;gt;	&amp;lt;">
+<meta property="og:updated_time" content="2017-01-06T11:03:46.537Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JFinal上传图片及其重命名">
+<meta name="twitter:description" content="一、表单处理12345&amp;lt;form action=&amp;quot;applicant/changeInformation&amp;quot; method=&amp;quot;post&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot; &amp;gt;	&amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; /&amp;gt;	&amp;lt;">
+    
+        <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">刘哲</h5>
+          <a href="mailto:miuiclub@qq.com" title="miuiclub@qq.com" class="mail">miuiclub@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/LiuZhe6" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/3102110533" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JFinal上传图片及其重命名</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JFinal上传图片及其重命名</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-08-01T09:34:12.000Z" itemprop="datePublished" class="page-time">
+  2016-08-01
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、表单处理"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、表单处理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、在后台的配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、在后台的配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、在Controller里的配置"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、在Controller里的配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、对刚刚已经上传成功的文件进行重命名"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、对刚刚已经上传成功的文件进行重命名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#这是我的第一篇博客，欢迎大家批评指正"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">这是我的第一篇博客，欢迎大家批评指正</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-JFinal上传图片及其重命名"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JFinal上传图片及其重命名</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年08月01日 17:34" datetime="2016-08-01T09:34:12.000Z"  itemprop="datePublished">2016-08-01</time>
+
+            
+
+
+            
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="一、表单处理"><a href="#一、表单处理" class="headerlink" title="一、表单处理"></a>一、表单处理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;applicant/changeInformation&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; &gt;</div><div class="line">	&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</div><div class="line">	&lt;input type=&quot;text&quot; name=&quot;username&quot;/&gt;</div><div class="line">	&lt;input type=&quot;password&quot; name=&quot;password&quot;/&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+<h2 id="二、在后台的配置"><a href="#二、在后台的配置" class="headerlink" title="二、在后台的配置"></a>二、在后台的配置</h2><p>我们需要在Controller中得到表单里的三个东西，因为我们在客户端的请求为multipart request(form 表单使用了<strong>enctype=”multipart/form-data”</strong>)， 那么必须先调用getFile系列的方法才能使用getPara系列的方法正常工作，因为multipart request需要通过getFile系列方法解析请求体中的数据，包括参数</p>
+<p>我们设置上传文件的路径为<strong>“D:/Activity_Registration_System/user_img”</strong><br>那么，在jfinal的config中设置一个基础上传路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void configConstant(Constants me) &#123;</div><div class="line">	// TODO Auto-generated method stub</div><div class="line">	PropKit.use(&quot;SQLConfig.txt&quot;);</div><div class="line">	me.setDevMode(PropKit.getBoolean(&quot;devMode&quot;));</div><div class="line">	me.setViewType(ViewType.JSP);</div><div class="line">	//设置上传的基础路径,设置在D盘的Activity_Registration_System文件夹下面</div><div class="line">	me.setBaseUploadPath(&quot;D:/Activity_Registration_System/&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="三、在Controller里的配置"><a href="#三、在Controller里的配置" class="headerlink" title="三、在Controller里的配置"></a>三、在Controller里的配置</h2><p>接下来，在Controller里面得到文件以及数据，并把文件保存在这个目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//先使用getFile()获得上传的文件,并存在 基础路径+user_img 这个绝对路径下面</div><div class="line">String realpath = &quot;user_img&quot;;</div><div class="line">UploadFile uf = getFile(&quot;header&quot;,realpath);</div></pre></td></tr></table></figure></p>
+<p>接下来获取其他数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">String username = getPara(&quot;username&quot;);</div><div class="line">System.out.println(&quot;username:&quot;+username);</div><div class="line">String email = getPara(&quot;email&quot;);</div><div class="line">System.out.println(&quot;email:&quot;+email);</div></pre></td></tr></table></figure></p>
+<h2 id="四、对刚刚已经上传成功的文件进行重命名"><a href="#四、对刚刚已经上传成功的文件进行重命名" class="headerlink" title="四、对刚刚已经上传成功的文件进行重命名"></a>四、对刚刚已经上传成功的文件进行重命名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">//首先我们要获取文件的拓展名，所以要把文件原名称进行拆分</div><div class="line">String fileName = file.getName();</div><div class="line">String extName = fileName.substring(fileName.lastIndexOf(&quot;.&quot;)+ 1);	//获取拓展名,按照 &quot;.&quot; 分隔开的最后一个字符串</div><div class="line"></div><div class="line">//接下来，获取刚刚上传的文件的局对路径</div><div class="line">String [] test = file.getPath().split(&quot;user_img&quot;);</div><div class="line">//这里之所以按user_img 进行分割是因为有个bug   如果按照\进行分割，则应写为spilt(&quot;\\&quot;)  但是编译器会解析为按字符串\\进行分割，所以会出现问题</div><div class="line"></div><div class="line">String road = &quot;&quot;;</div><div class="line">		for (int i = 0 ;i &lt; test.length;i++)&#123;</div><div class="line">			if (i == test.length-1)&#123;</div><div class="line">				break;</div><div class="line">			&#125;</div><div class="line">			road += test[i];</div><div class="line">		&#125;</div><div class="line">		road += &quot;user_img\\&quot; + getSessionAttr(&quot;student_id&quot;)+&quot;.&quot; + extName;//我这里按照学号进行命名</div><div class="line"></div><div class="line">//此时road的值为  文件的 绝对路径 + 新名称</div><div class="line">file.renameTo(new File(road));</div></pre></td></tr></table></figure>
+<p>这样，简单的单文件、数据上传以及重命名就完成了。</p>
+<h3 id="这是我的第一篇博客，欢迎大家批评指正"><a href="#这是我的第一篇博客，欢迎大家批评指正" class="headerlink" title="这是我的第一篇博客，欢迎大家批评指正"></a>这是我的第一篇博客，欢迎大家批评指正</h3>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-06T11:03:46.537Z" itemprop="dateUpdated">2017年1月6日 19:03</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/08/01/JFinal上传图片及其重命名/" target="_blank" rel="external">http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/</a>
+    </div>
+    <footer>
+        <a href="http://liuzhe6.github.io">
+            <img src="/img/avatar.png" alt="刘哲">
+            刘哲
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JFinal/">JFinal</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&title=《JFinal上传图片及其重命名》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&title=《JFinal上传图片及其重命名》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JFinal上传图片及其重命名》 — A Coder's Blog&url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/08/06/jsp使用项目路径之外的图片方法/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">jsp使用项目路径之外的图片方法</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="JFinal上传图片及其重命名" data-title="JFinal上传图片及其重命名" data-url="http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>A Coder's Blog &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&title=《JFinal上传图片及其重命名》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&title=《JFinal上传图片及其重命名》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JFinal上传图片及其重命名》 — A Coder's Blog&url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuUlEQVR42u3a0WrDMAwF0P7/T3ewp43R+Eqy0w5OnsrSuD4e2IqkxyO+nt/Xq788f1zJ3WT8v89ejzC68PDw8FpTf3UlU0zuzjGv5rNYAjw8PLxjvOtpXbOvn5qMkBw8CwseHh7eW3nVgDs5bJKZ5PPBw8PD+3xesvVXN3c8PDy8/8LLN/EoBVBciOv0R34XDw8P7x7eZFN+1+eD9T08PDy8QVW9d0jk5bE8RO5deHh4eCd41dJUr/BfbUeopncX7Qt4eHh4W3nV9qYEM7lbfWoxfzw8PLwDvGqRqRdMJ0s2GTl/Cg8PD28Xb75BL2L2rSnjclMCHh4e3gFelLEIhusFu5PplhcUDw8Pb8xLBqpOqFfoqjYQJIuCh4eHd4I3OQx6wXEh/I3bCI6cdXh4eHitCfU26144noxZTeni4eHh3c+bNz8lqd48qZEnO/Dw8PDu5/XSB/N0bbJY1UMLDw8P7wSv+pLf2+7z5egF1lGuGg8PD288t2q5KwmUJyHvPJj+9RkPDw/vFl61qJ8fGHkrQF7cWiwfHh4e3mFePpVdzQR5g0J1OfDw8PBO83pJhN72nZfHeo1Zoz4FPDw8vAG1+to/KfnPy2DR8YOHh4d3gJe/5OcbehIo58dPFYmHh4d3mrdrE58UuvKSWznQx8PDw9vEy39m0krVGzk5BvDw8PDey+uFuXmatTnF+NnFWYeHh4e3iTcphlXTE3mYvjlpi4eHh7eVNylZVQPrahNAr7EgemPAw8PDG/AmJbFJQrYavu9tAsPDw8Ob83ohcrXolRwY1fRu9M/Aw8PDO8abhMLVtqpeorbaIoaHh4f3Cbxe+rWKzw+bqMkADw8P72N41VA4D5EXG311Pnh4eHjHeL1kRK9FoJBKCJ5dLBAeHh7eAV4v5Zr8fC/dsCGMntT38PDw8K6++QX/ReQpUHws7AAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.7" async></script>
+
+
+
+
+
+
+
+</body>
+</html>
