@@ -31,14 +31,14 @@
 <meta property="og:url" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/index.html">
 <meta property="og:site_name" content="A Coder's Blog">
 <meta property="og:description" content="ajax开发AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，">
-<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p1.png">
-<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p2.png">
-<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p3.png">
+<meta property="og:image" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/ajax-p1.png">
+<meta property="og:image" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/ajax-p2.png">
+<meta property="og:image" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/ajax-p3.png">
 <meta property="og:updated_time" content="2017-01-18T10:44:42.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax简介">
 <meta name="twitter:description" content="ajax开发AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，">
-<meta name="twitter:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p1.png">
+<meta name="twitter:image" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/ajax-p1.png">
     
         <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
     
@@ -203,7 +203,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="Ajax简介\ajax-p1.png" alt="logo" title="">
+                    <img src="/2017/01/16/Ajax简介/ajax-p1.png" alt="logo" title="">
                 </div>
                 <div class="image-caption">logo</div>
             </figure>  
@@ -227,7 +227,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="Ajax简介\ajax-p2.png" alt="logo" title="">
+                    <img src="/2017/01/16/Ajax简介/ajax-p2.png" alt="logo" title="">
                 </div>
                 <div class="image-caption">logo</div>
             </figure>
@@ -244,7 +244,7 @@
 <hr>
 <p>Async = false<br>如需使用 async=false，请将 open() 方法中的第三个参数改为 false：<br><code>xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,false);</code><br>我们不推荐使用 async=false，但是对于一些小型的请求，也是可以的。<br>请记住，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。<br>注释：当您使用 async=false 时，请不要编写 <code>onreadystatechange</code> 函数 -   把代码放到 send() 语句后面即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,false);</div><div class="line">xmlhttp.send();</div><div class="line">document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</div></pre></td></tr></table></figure></p>
 <hr>
-<h2 id="AJAX-服务器响应"><a href="#AJAX-服务器响应" class="headerlink" title="AJAX - 服务器响应"></a>AJAX - 服务器响应</h2><p>服务器响应<br>如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。<br><img src="Ajax简介\ajax-p3.png" alt="logo"></p>
+<h2 id="AJAX-服务器响应"><a href="#AJAX-服务器响应" class="headerlink" title="AJAX - 服务器响应"></a>AJAX - 服务器响应</h2><p>服务器响应<br>如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。<br><img src="/2017/01/16/Ajax简介/ajax-p3.png" alt="logo"></p>
 <hr>
 <p>responseText 属性<br>如果来自服务器的响应并非 XML，请使用 responseText 属性。<br>responseText 属性返回字符串形式的响应，因此您可以这样使用：<br><code>document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</code></p>
 <hr>
@@ -339,9 +339,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/01/18/jstl简介/" id="post-prev" class="post-nav-link">
+      <a href="/2017/01/16/jQuery-ajax/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">jstl简介</h4>
+        <h4 class="title">jQuery ajax</h4>
       </a>
     </div>
   
