@@ -26,18 +26,18 @@
     
     <meta name="keywords" content="Android,数据存储">
     <meta name="description" content="Android开发中存储文件文件默认存储位置为 /data/data//files/目录下的主要有两种模式可选，MODE_PRIVATE和MODE_APPEND。MODE_PRIVATE：是默认操作模式，表示当指定同样文件名的时候，所写的内容会覆盖原文件中的内容。MODE_APPEND：表示如果该文件已经存在，就往文件里面追加内容，不存在就创建新文件。
-下面是一段简单的代码示例：```public">
+下面是一段简单的代码示例：123456789">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android将数据存储到文件中">
 <meta property="og:url" content="http://liuzhe6.github.io/2017/01/19/Android将数据存储到文件中/index.html">
 <meta property="og:site_name" content="A Coder's Blog">
 <meta property="og:description" content="Android开发中存储文件文件默认存储位置为 /data/data//files/目录下的主要有两种模式可选，MODE_PRIVATE和MODE_APPEND。MODE_PRIVATE：是默认操作模式，表示当指定同样文件名的时候，所写的内容会覆盖原文件中的内容。MODE_APPEND：表示如果该文件已经存在，就往文件里面追加内容，不存在就创建新文件。
-下面是一段简单的代码示例：```public">
-<meta property="og:updated_time" content="2017-01-19T02:28:59.296Z">
+下面是一段简单的代码示例：123456789">
+<meta property="og:updated_time" content="2017-01-30T03:30:34.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android将数据存储到文件中">
 <meta name="twitter:description" content="Android开发中存储文件文件默认存储位置为 /data/data//files/目录下的主要有两种模式可选，MODE_PRIVATE和MODE_APPEND。MODE_PRIVATE：是默认操作模式，表示当指定同样文件名的时候，所写的内容会覆盖原文件中的内容。MODE_APPEND：表示如果该文件已经存在，就往文件里面追加内容，不存在就创建新文件。
-下面是一段简单的代码示例：```public">
+下面是一段简单的代码示例：123456789">
     
         <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
     
@@ -192,7 +192,7 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="Android开发中存储文件"><a href="#Android开发中存储文件" class="headerlink" title="Android开发中存储文件"></a>Android开发中存储文件</h1><p>文件默认存储位置为 /data/data/<package name="">/files/目录下的<br>主要有两种模式可选，MODE_PRIVATE和MODE_APPEND。<br>MODE_PRIVATE：是默认操作模式，表示当指定同样文件名的时候，所写的内容会覆盖原文件中的内容。<br>MODE_APPEND：表示如果该文件已经存在，就往文件里面追加内容，不存在就创建新文件。</package></p>
-<p>下面是一段简单的代码示例：<br>```<br>public void save(){<br>    String data = “Data to save”;<br>    FileOutputStream out = null;<br>    BufferedWriter writer = null;<br>    try{<br>        out = openFileOutput(“data”, Context.MODE_PRIVATE);<br>        writer = new BufferedWriter(new OutputStreamWriter(out));<br>        writer.write(data);<br>    } catch (IOException e){<br>        e.printStackTrace();<br>    } finally {<br>        try{<br>            if (writer != null){<br>                writer.close();<br>            }<br>        } catch (IOException e) {<br>            e.printStackTrace();<br>        }<br>    }<br>}</p>
+<p>下面是一段简单的代码示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">public void save()&#123;</div><div class="line">    String data = &quot;Data to save&quot;;</div><div class="line">    FileOutputStream out = null;</div><div class="line">    BufferedWriter writer = null;</div><div class="line">    try&#123;</div><div class="line">        out = openFileOutput(&quot;data&quot;, Context.MODE_PRIVATE);</div><div class="line">        writer = new BufferedWriter(new OutputStreamWriter(out));</div><div class="line">        writer.write(data);</div><div class="line">    &#125; catch (IOException e)&#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125; finally &#123;</div><div class="line">        try&#123;</div><div class="line">            if (writer != null)&#123;</div><div class="line">                writer.close();</div><div class="line">            &#125;</div><div class="line">        &#125; catch (IOException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
         </div>
 
@@ -200,7 +200,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-01-19T02:28:59.296Z" itemprop="dateUpdated">2017年1月19日 10:28</time>
+    最后更新时间：<time datetime="2017-01-30T03:30:34.095Z" itemprop="dateUpdated">2017年1月30日 11:30</time>
 </span><br>
 
 
