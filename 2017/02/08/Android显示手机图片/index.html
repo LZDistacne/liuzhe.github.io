@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?true"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Android显示手机图片 | A Coder&#39;s Blog | 有关计算机的点点滴滴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Android">
+    <meta name="description" content="点击按钮后1Button chooseFromAlbum = (Button) findViewById(R.id.choose_from_album);&amp;#10;       chooseFromAlbum.setOnClickListener(new View.OnClickListener() &amp;#123;&amp;#10;           @Override&amp;#10;           pu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android显示手机图片">
+<meta property="og:url" content="http://liuzhe6.github.io/2017/02/08/Android显示手机图片/index.html">
+<meta property="og:site_name" content="A Coder's Blog">
+<meta property="og:description" content="点击按钮后1Button chooseFromAlbum = (Button) findViewById(R.id.choose_from_album);&amp;#10;       chooseFromAlbum.setOnClickListener(new View.OnClickListener() &amp;#123;&amp;#10;           @Override&amp;#10;           pu">
+<meta property="og:updated_time" content="2017-02-08T08:39:52.870Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android显示手机图片">
+<meta name="twitter:description" content="点击按钮后1Button chooseFromAlbum = (Button) findViewById(R.id.choose_from_album);&amp;#10;       chooseFromAlbum.setOnClickListener(new View.OnClickListener() &amp;#123;&amp;#10;           @Override&amp;#10;           pu">
+    
+        <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
+    <meta name="baidu-site-verification" content="e0OSN9VAuH" />
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">刘哲</h5>
+          <a href="mailto:miuiclub@qq.com" title="miuiclub@qq.com" class="mail">miuiclub@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                目录
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/LiuZhe6" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/3102110533" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                微博
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Android显示手机图片</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Android显示手机图片</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-02-08T08:33:32.000Z" itemprop="datePublished" class="page-time">
+  2017-02-08
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Android/">Android</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#点击按钮后"><span class="post-toc-number">1.</span> <span class="post-toc-text">点击按钮后</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#动态申请读写SD卡权限"><span class="post-toc-number">2.</span> <span class="post-toc-text">动态申请读写SD卡权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对启动活动时返回结果的判断"><span class="post-toc-number">3.</span> <span class="post-toc-text">对启动活动时返回结果的判断</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分别对Android4-4以上及以下的设备进行操作"><span class="post-toc-number">4.</span> <span class="post-toc-text">分别对Android4.4以上及以下的设备进行操作</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Android显示手机图片"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Android显示手机图片</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年02月08日 16:33" datetime="2017-02-08T08:33:32.000Z"  itemprop="datePublished">2017-02-08</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Android/">Android</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="点击按钮后"><a href="#点击按钮后" class="headerlink" title="点击按钮后"></a>点击按钮后</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Button chooseFromAlbum = (Button) findViewById(R.id.choose_from_album);&#10;       chooseFromAlbum.setOnClickListener(new View.OnClickListener() &#123;&#10;           @Override&#10;           public void onClick(View v) &#123;&#10;&#10;               //&#22914;&#26524;&#27809;&#26377;&#35835;&#21644;&#20889;SD&#21345;&#26435;&#38480;&#26102;&#10;               if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)&#123;&#10;                   ActivityCompat.requestPermissions(MainActivity.this, new String[] &#123;Manifest.permission.WRITE_EXTERNAL_STORAGE&#125; ,1);&#10;               &#125; else &#123;&#10;                   openAlbum();&#10;               &#125;&#10;           &#125;&#10;       &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="动态申请读写SD卡权限"><a href="#动态申请读写SD卡权限" class="headerlink" title="动态申请读写SD卡权限"></a>动态申请读写SD卡权限</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;//&#21160;&#24577;&#30003;&#35831;&#26435;&#38480; &#36820;&#22238;&#32467;&#26524;&#10;@Override&#10;public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) &#123;&#10;    switch (requestCode)&#123;&#10;        case 1:&#10;            if (grantResults.length &#62;0 &#38;&#38; grantResults[0] == PackageManager.PERMISSION_GRANTED)&#123;&#10;                openAlbum();&#10;            &#125; else &#123;&#10;                Toast.makeText(MainActivity.this , &#34;You denied the permission&#34; , Toast.LENGTH_SHORT).show();&#10;            &#125;&#10;            break;&#10;        default:&#10;            break;&#10;    &#125;&#10;&#125;&#10;&#10;private void openAlbum() &#123;&#10;    Intent intent = new Intent(&#34;android.intent.action.GET_CONTENT&#34;);&#10;    intent.setType(&#34;image/*&#34;);&#10;    startActivityForResult(intent , CHOOSE_PHOTO);&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="对启动活动时返回结果的判断"><a href="#对启动活动时返回结果的判断" class="headerlink" title="对启动活动时返回结果的判断"></a>对启动活动时返回结果的判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Override&#10;    protected void onActivityResult(int requestCode, int resultCode, Intent data) &#123;&#10;        switch (requestCode)&#123;&#10;            &#10;            case CHOOSE_PHOTO:&#10;                if (resultCode == RESULT_OK)&#123;&#10;                    //&#21028;&#26029;&#25163;&#26426;&#31995;&#32479;&#29256;&#26412;&#21495;&#10;                    if (Build.VERSION.SDK_INT &#62;= 19)&#123;&#10;                        //4.4&#21450;&#20197;&#19978;&#30340;&#31995;&#32479;&#29992;&#36825;&#20010;&#26041;&#27861;&#22788;&#29702;&#22270;&#29255;&#10;                        handleImageOnKitKat(data);&#10;                    &#125; else &#123;&#10;                        //4.4&#20197;&#19979;&#30340;&#31995;&#32479;&#30340;&#29992;&#36825;&#20010;&#26041;&#27861;&#22788;&#29702;&#22270;&#29255;&#10;                        handleImageBeforeKitKat(data);&#10;                    &#125;&#10;                &#125;&#10;                break;&#10;            default:&#10;                break;&#10;        &#125;&#10;    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="分别对Android4-4以上及以下的设备进行操作"><a href="#分别对Android4-4以上及以下的设备进行操作" class="headerlink" title="分别对Android4.4以上及以下的设备进行操作"></a>分别对Android4.4以上及以下的设备进行操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@TargetApi(19)&#10;    private void handleImageOnKitKat(Intent data) &#123;&#10;        String imagePath = null;&#10;        Uri uri = data.getData();&#10;        Log.d(TAG, &#34;handleImageOnKitKat: uri :&#34; + uri);&#10;        if (DocumentsContract.isDocumentUri(this,uri))&#123;&#10;            //&#22914;&#26524;&#26159;document&#31867;&#22411;&#30340;Uri,&#21017;&#36890;&#36807;document id&#22788;&#29702;&#10;            String docId = DocumentsContract.getDocumentId(uri);&#10;&#10;            Log.d(TAG, &#34;handleImageOnKitKat: &#23553;&#35013;&#30340;docID : &#34; + docId);&#10;            if (&#34;com.android.providers.media.documents&#34;.equals(uri.getAuthority()))&#123;&#10;                //&#35299;&#26512;&#20986;&#25968;&#23383;&#26684;&#24335;&#30340;id&#10;                String id = docId.split(&#34;:&#34;)[1];&#10;                String selection = MediaStore.Images.Media._ID + &#34;=&#34; + id;&#10;                Log.d(TAG, &#34;handleImageOnKitKat: selection ;&#34;+selection);&#10;                imagePath = getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI ,selection);&#10;            &#125; else if (&#34;com.android.providers.downloads.documents&#34;.equals(uri.getAuthority()))&#123;&#10;                Uri contentUri = ContentUris.withAppendedId(Uri.parse(&#34;content://downloads/public_downloads&#34;), Long.valueOf(docId));&#10;                imagePath = uri.getPath();&#10;            &#125;&#10;&#10;        &#125; else if (&#34;content&#34;.equalsIgnoreCase(uri.getScheme()))&#123;&#10;            //&#22914;&#26524;&#26159;content&#31867;&#22411;&#30340;uri,&#21017;&#20351;&#29992;&#26222;&#36890;&#26041;&#24335;&#22788;&#29702;&#10;            imagePath = getImagePath(uri, null);&#10;        &#125; else if (&#34;file&#34;.equalsIgnoreCase(uri.getScheme()))&#123;&#10;            //&#22914;&#26524;&#26159;file&#31867;&#22411;&#30340;Uri,&#30452;&#25509;&#33719;&#21462;&#22270;&#29255;&#36335;&#24452;&#21363;&#21487;&#10;            imagePath = uri.getPath();&#10;        &#125;&#10;        //&#26681;&#25454;&#36335;&#24452;&#26174;&#31034;&#22270;&#29255;&#10;        displayImage(imagePath);&#10;    &#125;&#10;&#10;&#10;&#10;&#10;    private void handleImageBeforeKitKat(Intent data) &#123;&#10;        Uri uri = data.getData();&#10;        String imagePath = getImagePath(uri,null);&#10;        displayImage(imagePath);&#10;    &#125;&#10;&#10;&#10;    //&#22788;&#29702;Uri&#65292;&#24471;&#21040;&#30495;&#23454;&#36335;&#24452;&#10;    private String getImagePath(Uri uri, String selection) &#123;&#10;        String path = null;&#10;        //&#36890;&#36807;Uri &#21644; selection&#26469;&#33719;&#21462;&#30495;&#23454;&#30340;&#22270;&#29255;&#36335;&#24452;&#10;        Cursor cursor = getContentResolver().query(uri, null,selection , null , null);&#10;        if (cursor != null)&#123;&#10;            if (cursor.moveToFirst())&#123;&#10;                path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));&#10;            &#125;&#10;            cursor.close();&#10;        &#125;&#10;        return path;&#10;    &#125;&#10;&#10;    private void displayImage(String imagePath) &#123;&#10;        if (imagePath != null)&#123;&#10;            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);&#10;            picture.setImageBitmap(bitmap);&#10;        &#125; else &#123;&#10;            Toast.makeText(this, &#34;failed to get image&#34;, Toast.LENGTH_SHORT).show();&#10;        &#125;&#10;    &#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-02-08T08:39:52.870Z" itemprop="dateUpdated">2017年2月8日 16:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/02/08/Android显示手机图片/" target="_blank" rel="external">http://liuzhe6.github.io/2017/02/08/Android显示手机图片/</a>
+    </div>
+    <footer>
+        <a href="http://liuzhe6.github.io">
+            <img src="/img/avatar.png" alt="刘哲">
+            刘哲
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/&title=《Android显示手机图片》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/&title=《Android显示手机图片》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Android显示手机图片》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/19/Android将数据存储到文件中/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Android将数据存储到文件中</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="Android显示手机图片" data-title="Android显示手机图片" data-url="http://liuzhe6.github.io/2017/02/08/Android显示手机图片/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ysblog', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.png" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.png" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+	<span id="busuanzi_container_site_uv">
+  		你是第<span id="busuanzi_value_site_uv"></span>位访客哦~
+	</span>
+    <!-- <span id="busuanzi_container_site_uv" style='display:none'>
+        <span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        <span id="busuanzi_value_site_pv"></span>
+    </span> -->
+</p>
+
+
+
+<!--
+<div>
+<script type="text/javascript">
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1260086263'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260086263%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div> -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2ad8b8fcf9b807fab9c8c855db5356ff";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>A Coder's Blog &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/&title=《Android显示手机图片》 — A Coder's Blog&pic=http://liuzhe6.github.io/img/avatar.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/&title=《Android显示手机图片》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Android显示手机图片》 — A Coder's Blog&url=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/&via=http://liuzhe6.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://liuzhe6.github.io/2017/02/08/Android显示手机图片/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aS27DMAxF0ex/0ylQdBZYuY9sipq8HgWBLet4QIifxwNfz+/r6je5Xld7/f91/V++ZMiQcVsGef3V1s+r8U9w/mTk08iQIWMDgwTZqy12ViBUFJRlyJAhAx/vzsj0KClDhgwZtYBLUs1aEitDhgwZZwYJfCks/ScN0DJkyNjD6DcGPvf7T/sbMmTI+JeMZ3jx0hsPx51E9+cpGTJkjGbwA1ytAFdLX4vJswwZMoYyyMAEOajx7RI2b5HKkCFjA4O/uDZU0Vmntk8ZMmRMZZzLXmnpP72TvAt9JhkyZKxkpCGvU2JLj61B70KGDBkjGOeg1h/F6BTg4manDBkyxjFqx75aCObbTT+oDBkyZjPSW9PX8CEMvs7lh5MhQ8YCBi+WkaU/UaSTIUPGZkYaOmsDFsGcWqPBIEOGjNkMEgrJJmqNgTRwo8kRGTJkjGMQQNqA5E/xwtyb1WTIkDGUkb6mMxJRw6C3yJAhYwGjk0bWAmu/hRnMi8mQIeO2DB5G00Mhypjx6Mab5FmGDBkLGJ1kkhTIeFktHfWQIUPGBkbtYJeGy1rgTleWIUPGVMYzvHiL8Xykq61/uaYMGTJGM9Jgl0a5WkqcFuNkyJCxgZFuJU1ESerbGR2TIUPGHgYv8XeOiXxcg+wnmO+QIUPGGkanMckTXd6ckCFDhox+KY3fn4ba1tFQhgwZt2V0ivWEmjZE4z3IkCFjNKOWQHYCJb+Hl/NkyJAxlPEFL/fwLkBWYZEAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1260086263&web_id=1260086263')
+
+</script>
+
+<script src="/js/main.min.js?v=1.4.7"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.4.7" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
