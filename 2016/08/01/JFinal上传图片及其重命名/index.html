@@ -25,16 +25,16 @@
     
     
     <meta name="keywords" content="JFinal">
-    <meta name="description" content="一、表单处理1&amp;#60;form action=&amp;#34;applicant/changeInformation&amp;#34; method=&amp;#34;post&amp;#34; enctype=&amp;#34;multipart/form-data&amp;#34; &amp;#62;&amp;#10;&amp;#9;&amp;#60;input type=&amp;#34;file&amp;#34; name=&amp;#34;file&amp;#34; /&amp;#62;&amp;#10;&amp;#">
+    <meta name="description" content="一、表单处理12345&amp;lt;form action=&amp;quot;applicant/changeInformation&amp;quot; method=&amp;quot;post&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot; &amp;gt;	&amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; /&amp;gt;	&amp;lt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JFinal上传图片及其重命名">
 <meta property="og:url" content="http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/index.html">
 <meta property="og:site_name" content="A Coder's Blog">
-<meta property="og:description" content="一、表单处理1&amp;#60;form action=&amp;#34;applicant/changeInformation&amp;#34; method=&amp;#34;post&amp;#34; enctype=&amp;#34;multipart/form-data&amp;#34; &amp;#62;&amp;#10;&amp;#9;&amp;#60;input type=&amp;#34;file&amp;#34; name=&amp;#34;file&amp;#34; /&amp;#62;&amp;#10;&amp;#">
-<meta property="og:updated_time" content="2017-01-06T11:03:46.537Z">
+<meta property="og:description" content="一、表单处理12345&amp;lt;form action=&amp;quot;applicant/changeInformation&amp;quot; method=&amp;quot;post&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot; &amp;gt;	&amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; /&amp;gt;	&amp;lt;">
+<meta property="og:updated_time" content="2017-02-08T08:57:34.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JFinal上传图片及其重命名">
-<meta name="twitter:description" content="一、表单处理1&amp;#60;form action=&amp;#34;applicant/changeInformation&amp;#34; method=&amp;#34;post&amp;#34; enctype=&amp;#34;multipart/form-data&amp;#34; &amp;#62;&amp;#10;&amp;#9;&amp;#60;input type=&amp;#34;file&amp;#34; name=&amp;#34;file&amp;#34; /&amp;#62;&amp;#10;&amp;#">
+<meta name="twitter:description" content="一、表单处理12345&amp;lt;form action=&amp;quot;applicant/changeInformation&amp;quot; method=&amp;quot;post&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot; &amp;gt;	&amp;lt;input type=&amp;quot;file&amp;quot; name=&amp;quot;file&amp;quot; /&amp;gt;	&amp;lt;">
     
         <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
     
@@ -149,6 +149,8 @@
 </time>
 
 
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java-web/">Java web</a></li></ul>
+
             
         </h5>
     </div>
@@ -176,6 +178,8 @@
             <time class="post-time" title="2016年08月01日 17:34" datetime="2016-08-01T09:34:12.000Z"  itemprop="datePublished">2016-08-01</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java-web/">Java web</a></li></ul>
+
 
 
             
@@ -188,13 +192,13 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="一、表单处理"><a href="#一、表单处理" class="headerlink" title="一、表单处理"></a>一、表单处理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;form action=&#34;applicant/changeInformation&#34; method=&#34;post&#34; enctype=&#34;multipart/form-data&#34; &#62;&#10;&#9;&#60;input type=&#34;file&#34; name=&#34;file&#34; /&#62;&#10;&#9;&#60;input type=&#34;text&#34; name=&#34;username&#34;/&#62;&#10;&#9;&#60;input type=&#34;password&#34; name=&#34;password&#34;/&#62;&#10;&#60;/form&#62;</span><br></pre></td></tr></table></figure>
+            <h2 id="一、表单处理"><a href="#一、表单处理" class="headerlink" title="一、表单处理"></a>一、表单处理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&quot;applicant/changeInformation&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; &gt;</div><div class="line">	&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;</div><div class="line">	&lt;input type=&quot;text&quot; name=&quot;username&quot;/&gt;</div><div class="line">	&lt;input type=&quot;password&quot; name=&quot;password&quot;/&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
 <h2 id="二、在后台的配置"><a href="#二、在后台的配置" class="headerlink" title="二、在后台的配置"></a>二、在后台的配置</h2><p>我们需要在Controller中得到表单里的三个东西，因为我们在客户端的请求为multipart request(form 表单使用了<strong>enctype=”multipart/form-data”</strong>)， 那么必须先调用getFile系列的方法才能使用getPara系列的方法正常工作，因为multipart request需要通过getFile系列方法解析请求体中的数据，包括参数</p>
 <p>我们设置上传文件的路径为<strong>“D:/Activity_Registration_System/user_img”</strong><br>那么，在jfinal的config中设置一个基础上传路径</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Override&#10;public void configConstant(Constants me) &#123;&#10;&#9;// TODO Auto-generated method stub&#10;&#9;PropKit.use(&#34;SQLConfig.txt&#34;);&#10;&#9;me.setDevMode(PropKit.getBoolean(&#34;devMode&#34;));&#10;&#9;me.setViewType(ViewType.JSP);&#10;&#9;//&#35774;&#32622;&#19978;&#20256;&#30340;&#22522;&#30784;&#36335;&#24452;,&#35774;&#32622;&#22312;D&#30424;&#30340;Activity_Registration_System&#25991;&#20214;&#22841;&#19979;&#38754;&#10;&#9;me.setBaseUploadPath(&#34;D:/Activity_Registration_System/&#34;);&#10;&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三、在Controller里的配置"><a href="#三、在Controller里的配置" class="headerlink" title="三、在Controller里的配置"></a>三、在Controller里的配置</h2><p>接下来，在Controller里面得到文件以及数据，并把文件保存在这个目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;//&#20808;&#20351;&#29992;getFile()&#33719;&#24471;&#19978;&#20256;&#30340;&#25991;&#20214;,&#24182;&#23384;&#22312; &#22522;&#30784;&#36335;&#24452;+user_img &#36825;&#20010;&#32477;&#23545;&#36335;&#24452;&#19979;&#38754;&#10;String realpath = &#34;user_img&#34;;&#10;UploadFile uf = getFile(&#34;header&#34;,realpath);</span><br></pre></td></tr></table></figure></p>
-<p>接下来获取其他数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String username = getPara(&#34;username&#34;);&#10;System.out.println(&#34;username:&#34;+username);&#10;String email = getPara(&#34;email&#34;);&#10;System.out.println(&#34;email:&#34;+email);</span><br></pre></td></tr></table></figure></p>
-<h2 id="四、对刚刚已经上传成功的文件进行重命名"><a href="#四、对刚刚已经上传成功的文件进行重命名" class="headerlink" title="四、对刚刚已经上传成功的文件进行重命名"></a>四、对刚刚已经上传成功的文件进行重命名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#39318;&#20808;&#25105;&#20204;&#35201;&#33719;&#21462;&#25991;&#20214;&#30340;&#25299;&#23637;&#21517;&#65292;&#25152;&#20197;&#35201;&#25226;&#25991;&#20214;&#21407;&#21517;&#31216;&#36827;&#34892;&#25286;&#20998;&#10;String fileName = file.getName();&#10;String extName = fileName.substring(fileName.lastIndexOf(&#34;.&#34;)+ 1);&#9;//&#33719;&#21462;&#25299;&#23637;&#21517;,&#25353;&#29031; &#34;.&#34; &#20998;&#38548;&#24320;&#30340;&#26368;&#21518;&#19968;&#20010;&#23383;&#31526;&#20018;&#10;&#10;//&#25509;&#19979;&#26469;&#65292;&#33719;&#21462;&#21018;&#21018;&#19978;&#20256;&#30340;&#25991;&#20214;&#30340;&#23616;&#23545;&#36335;&#24452;&#10;String [] test = file.getPath().split(&#34;user_img&#34;);&#10;//&#36825;&#37324;&#20043;&#25152;&#20197;&#25353;user_img &#36827;&#34892;&#20998;&#21106;&#26159;&#22240;&#20026;&#26377;&#20010;bug   &#22914;&#26524;&#25353;&#29031;\&#36827;&#34892;&#20998;&#21106;&#65292;&#21017;&#24212;&#20889;&#20026;spilt(&#34;\\&#34;)  &#20294;&#26159;&#32534;&#35793;&#22120;&#20250;&#35299;&#26512;&#20026;&#25353;&#23383;&#31526;&#20018;\\&#36827;&#34892;&#20998;&#21106;&#65292;&#25152;&#20197;&#20250;&#20986;&#29616;&#38382;&#39064;&#10;&#10;String road = &#34;&#34;;&#10;&#9;&#9;for (int i = 0 ;i &#60; test.length;i++)&#123;&#10;&#9;&#9;&#9;if (i == test.length-1)&#123;&#10;&#9;&#9;&#9;&#9;break;&#10;&#9;&#9;&#9;&#125;&#10;&#9;&#9;&#9;road += test[i];&#10;&#9;&#9;&#125;&#10;&#9;&#9;road += &#34;user_img\\&#34; + getSessionAttr(&#34;student_id&#34;)+&#34;.&#34; + extName;//&#25105;&#36825;&#37324;&#25353;&#29031;&#23398;&#21495;&#36827;&#34892;&#21629;&#21517;&#10;&#10;//&#27492;&#26102;road&#30340;&#20540;&#20026;  &#25991;&#20214;&#30340; &#32477;&#23545;&#36335;&#24452; + &#26032;&#21517;&#31216;&#10;file.renameTo(new File(road));</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void configConstant(Constants me) &#123;</div><div class="line">	// TODO Auto-generated method stub</div><div class="line">	PropKit.use(&quot;SQLConfig.txt&quot;);</div><div class="line">	me.setDevMode(PropKit.getBoolean(&quot;devMode&quot;));</div><div class="line">	me.setViewType(ViewType.JSP);</div><div class="line">	//设置上传的基础路径,设置在D盘的Activity_Registration_System文件夹下面</div><div class="line">	me.setBaseUploadPath(&quot;D:/Activity_Registration_System/&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="三、在Controller里的配置"><a href="#三、在Controller里的配置" class="headerlink" title="三、在Controller里的配置"></a>三、在Controller里的配置</h2><p>接下来，在Controller里面得到文件以及数据，并把文件保存在这个目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//先使用getFile()获得上传的文件,并存在 基础路径+user_img 这个绝对路径下面</div><div class="line">String realpath = &quot;user_img&quot;;</div><div class="line">UploadFile uf = getFile(&quot;header&quot;,realpath);</div></pre></td></tr></table></figure></p>
+<p>接下来获取其他数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">String username = getPara(&quot;username&quot;);</div><div class="line">System.out.println(&quot;username:&quot;+username);</div><div class="line">String email = getPara(&quot;email&quot;);</div><div class="line">System.out.println(&quot;email:&quot;+email);</div></pre></td></tr></table></figure></p>
+<h2 id="四、对刚刚已经上传成功的文件进行重命名"><a href="#四、对刚刚已经上传成功的文件进行重命名" class="headerlink" title="四、对刚刚已经上传成功的文件进行重命名"></a>四、对刚刚已经上传成功的文件进行重命名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">//首先我们要获取文件的拓展名，所以要把文件原名称进行拆分</div><div class="line">String fileName = file.getName();</div><div class="line">String extName = fileName.substring(fileName.lastIndexOf(&quot;.&quot;)+ 1);	//获取拓展名,按照 &quot;.&quot; 分隔开的最后一个字符串</div><div class="line"></div><div class="line">//接下来，获取刚刚上传的文件的局对路径</div><div class="line">String [] test = file.getPath().split(&quot;user_img&quot;);</div><div class="line">//这里之所以按user_img 进行分割是因为有个bug   如果按照\进行分割，则应写为spilt(&quot;\\&quot;)  但是编译器会解析为按字符串\\进行分割，所以会出现问题</div><div class="line"></div><div class="line">String road = &quot;&quot;;</div><div class="line">		for (int i = 0 ;i &lt; test.length;i++)&#123;</div><div class="line">			if (i == test.length-1)&#123;</div><div class="line">				break;</div><div class="line">			&#125;</div><div class="line">			road += test[i];</div><div class="line">		&#125;</div><div class="line">		road += &quot;user_img\\&quot; + getSessionAttr(&quot;student_id&quot;)+&quot;.&quot; + extName;//我这里按照学号进行命名</div><div class="line"></div><div class="line">//此时road的值为  文件的 绝对路径 + 新名称</div><div class="line">file.renameTo(new File(road));</div></pre></td></tr></table></figure>
 <p>这样，简单的单文件、数据上传以及重命名就完成了。</p>
 <h3 id="这是我的第一篇博客，欢迎大家批评指正"><a href="#这是我的第一篇博客，欢迎大家批评指正" class="headerlink" title="这是我的第一篇博客，欢迎大家批评指正"></a>这是我的第一篇博客，欢迎大家批评指正</h3>
         </div>
@@ -203,7 +207,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-01-06T11:03:46.537Z" itemprop="dateUpdated">2017年1月6日 19:03</time>
+    最后更新时间：<time datetime="2017-02-08T08:57:34.324Z" itemprop="dateUpdated">2017年2月8日 16:57</time>
 </span><br>
 
 
@@ -246,7 +250,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&title=《JFinal上传图片及其重命名》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&title=《JFinal上传图片及其重命名》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -415,7 +419,7 @@ var _hmt = _hmt || [];
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&title=《JFinal上传图片及其重命名》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/01/JFinal上传图片及其重命名/&title=《JFinal上传图片及其重命名》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>

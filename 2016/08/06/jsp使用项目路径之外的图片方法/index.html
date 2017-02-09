@@ -27,20 +27,20 @@
     <meta name="keywords" content="jsp">
     <meta name="description" content="一个java web项目，把图片放在项目目录或者tomcat目录 可能会出现一些问题，那么我们可以放在项目目录之外，甚至可以放到不同的磁盘上，那么就需要在tomcat设置虚拟目录。
 在tomcat的conf/server.xml中设置虚拟路径在tomcat下的conf/server.xml中增加一个代码 在中间如下： 
-1&amp;#60;!--&amp;#22686;&amp;#21152;&amp;#30340;--path">
+12&amp;lt;!--增加的--path=&amp;quot;/虚拟名&amp;quot; doc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jsp使用项目路径之外的图片方法">
 <meta property="og:url" content="http://liuzhe6.github.io/2016/08/06/jsp使用项目路径之外的图片方法/index.html">
 <meta property="og:site_name" content="A Coder's Blog">
 <meta property="og:description" content="一个java web项目，把图片放在项目目录或者tomcat目录 可能会出现一些问题，那么我们可以放在项目目录之外，甚至可以放到不同的磁盘上，那么就需要在tomcat设置虚拟目录。
 在tomcat的conf/server.xml中设置虚拟路径在tomcat下的conf/server.xml中增加一个代码 在中间如下： 
-1&amp;#60;!--&amp;#22686;&amp;#21152;&amp;#30340;--path">
-<meta property="og:updated_time" content="2017-01-06T11:05:43.667Z">
+12&amp;lt;!--增加的--path=&amp;quot;/虚拟名&amp;quot; doc">
+<meta property="og:updated_time" content="2017-02-08T08:57:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jsp使用项目路径之外的图片方法">
 <meta name="twitter:description" content="一个java web项目，把图片放在项目目录或者tomcat目录 可能会出现一些问题，那么我们可以放在项目目录之外，甚至可以放到不同的磁盘上，那么就需要在tomcat设置虚拟目录。
 在tomcat的conf/server.xml中设置虚拟路径在tomcat下的conf/server.xml中增加一个代码 在中间如下： 
-1&amp;#60;!--&amp;#22686;&amp;#21152;&amp;#30340;--path">
+12&amp;lt;!--增加的--path=&amp;quot;/虚拟名&amp;quot; doc">
     
         <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
     
@@ -155,6 +155,8 @@
 </time>
 
 
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java-web/">Java web</a></li></ul>
+
             
         </h5>
     </div>
@@ -182,6 +184,8 @@
             <time class="post-time" title="2016年08月06日 18:21" datetime="2016-08-06T10:21:53.000Z"  itemprop="datePublished">2016-08-06</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java-web/">Java web</a></li></ul>
+
 
 
             
@@ -196,9 +200,9 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p><strong>一个java web项目，把图片放在项目目录或者tomcat目录 可能会出现一些问题，那么我们可以放在项目目录之外，甚至可以放到不同的磁盘上，那么就需要在tomcat设置虚拟目录。</strong></p>
 <h3 id="在tomcat的conf-server-xml中设置虚拟路径"><a href="#在tomcat的conf-server-xml中设置虚拟路径" class="headerlink" title="在tomcat的conf/server.xml中设置虚拟路径"></a>在tomcat的conf/server.xml中设置虚拟路径</h3><p>在tomcat下的conf/server.xml中增加一个代码 在<host></host>中间<br>如下： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;!--&#22686;&#21152;&#30340;--path=&#34;/&#34394;&#25311;&#21517;&#34; docBase=&#34;&#34394;&#25311;&#36335;&#24452;&#34; -&#62; &#10;&#60;Context path=&#34;/virtual&#34; docBase=&#34;D:\upload\&#34;  reloadable=&#34;true&#34;&#62;&#60;/Context&#62;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;!--增加的--path=&quot;/虚拟名&quot; docBase=&quot;虚拟路径&quot; -&gt; </div><div class="line">&lt;Context path=&quot;/virtual&quot; docBase=&quot;D:\upload\&quot;  reloadable=&quot;true&quot;&gt;&lt;/Context&gt;</div></pre></td></tr></table></figure>
 <p>在jsp中这样使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;img src=&#34;/virtual/1.jsp&#34;&#62;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;/virtual/1.jsp&quot;&gt;</div></pre></td></tr></table></figure>
 
         </div>
 
@@ -206,7 +210,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-01-06T11:05:43.667Z" itemprop="dateUpdated">2017年1月6日 19:05</time>
+    最后更新时间：<time datetime="2017-02-08T08:57:58.000Z" itemprop="dateUpdated">2017年2月8日 16:57</time>
 </span><br>
 
 
@@ -249,7 +253,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/06/jsp使用项目路径之外的图片方法/&title=《jsp使用项目路径之外的图片方法》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/06/jsp使用项目路径之外的图片方法/&title=《jsp使用项目路径之外的图片方法》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -425,7 +429,7 @@ var _hmt = _hmt || [];
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/06/jsp使用项目路径之外的图片方法/&title=《jsp使用项目路径之外的图片方法》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2016/08/06/jsp使用项目路径之外的图片方法/&title=《jsp使用项目路径之外的图片方法》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>

@@ -31,13 +31,14 @@
 <meta property="og:url" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/index.html">
 <meta property="og:site_name" content="A Coder's Blog">
 <meta property="og:description" content="ajax开发AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，">
-<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p1.png">
-<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p2.png">
-<meta property="og:image" content="http://liuzhe6.github.io/Ajax简介\ajax-p3.png">
-<meta property="og:updated_time" content="2017-01-18T10:44:42.663Z">
+<meta property="og:image" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/ajax-p1.png">
+<meta property="og:image" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/ajax-p2.png">
+<meta property="og:image" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/ajax-p3.png">
+<meta property="og:updated_time" content="2017-02-08T08:56:34.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax简介">
 <meta name="twitter:description" content="ajax开发AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，">
+<meta name="twitter:image" content="http://liuzhe6.github.io/2017/01/16/Ajax简介/ajax-p1.png">
     
         <link rel="alternative" href="/atom.xml" title="A Coder&#39;s Blog" type="application/atom+xml">
     
@@ -152,6 +153,8 @@
 </time>
 
 
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java-web/">Java web</a></li></ul>
+
             
         </h5>
     </div>
@@ -179,6 +182,8 @@
             <time class="post-time" title="2017年01月16日 11:22" datetime="2017-01-16T03:22:53.000Z"  itemprop="datePublished">2017-01-16</time>
 
             
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java-web/">Java web</a></li></ul>
+
 
 
             
@@ -194,15 +199,15 @@
             <h1 id="ajax开发"><a href="#ajax开发" class="headerlink" title="ajax开发"></a>ajax开发</h1><p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。<br>AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。<br>AJAX 是一种用于创建快速动态网页的技术。<br>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。  </p>
 <p>摘自百度百科  </p>
 <hr>
-<h2 id="AJAX-创建-XMLHttpRequest-对象"><a href="#AJAX-创建-XMLHttpRequest-对象" class="headerlink" title="AJAX - 创建 XMLHttpRequest 对象"></a>AJAX - 创建 XMLHttpRequest 对象</h2><p>XMLHttpRequest 是 AJAX 的基础。<br>XMLHttpRequest 对象<br>所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。<br>XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>创建 XMLHttpRequest 对象<br>所有现代浏览器（IE7+、Firefox、Chrome、Safari 以及 Opera）均内建 XMLHttpRequest 对象。<br>创建 XMLHttpRequest 对象的语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable=new XMLHttpRequest();</span><br></pre></td></tr></table></figure></p>
-<p>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable=new ActiveXObject(&#34;Microsoft.XMLHTTP&#34;);</span><br></pre></td></tr></table></figure></p>
-<p>为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var xmlhttp;  &#10;if (window.XMLHttpRequest)&#10;  &#123;// code for IE7+, Firefox, Chrome, Opera, Safari&#10;  xmlhttp=new XMLHttpRequest();&#10;  &#125;&#10;else&#10;  &#123;// code for IE6, IE5&#10;  xmlhttp=new ActiveXObject(&#34;Microsoft.XMLHTTP&#34;);&#10;  &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="AJAX-创建-XMLHttpRequest-对象"><a href="#AJAX-创建-XMLHttpRequest-对象" class="headerlink" title="AJAX - 创建 XMLHttpRequest 对象"></a>AJAX - 创建 XMLHttpRequest 对象</h2><p>XMLHttpRequest 是 AJAX 的基础。<br>XMLHttpRequest 对象<br>所有现代浏览器均支持 XMLHttpRequest 对象（IE5 和 IE6 使用 ActiveXObject）。<br>XMLHttpRequest 用于在后台与服务器交换数据。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<br>创建 XMLHttpRequest 对象<br>所有现代浏览器（IE7+、Firefox、Chrome、Safari 以及 Opera）均内建 XMLHttpRequest 对象。<br>创建 XMLHttpRequest 对象的语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variable=new XMLHttpRequest();</div></pre></td></tr></table></figure></p>
+<p>老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variable=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div></pre></td></tr></table></figure></p>
+<p>为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var xmlhttp;  </div><div class="line">if (window.XMLHttpRequest)</div><div class="line">  &#123;// code for IE7+, Firefox, Chrome, Opera, Safari</div><div class="line">  xmlhttp=new XMLHttpRequest();</div><div class="line">  &#125;</div><div class="line">else</div><div class="line">  &#123;// code for IE6, IE5</div><div class="line">  xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
 <hr>
-<h2 id="AJAX-向服务器发送请求"><a href="#AJAX-向服务器发送请求" class="headerlink" title="AJAX - 向服务器发送请求"></a>AJAX - 向服务器发送请求</h2><p>XMLHttpRequest 对象用于和服务器交换数据。<br>向服务器发送请求<br>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send()   方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(&#34;GET&#34;,&#34;test1.txt&#34;,true);&#10;xmlhttp.send();</span><br></pre></td></tr></table></figure></p>
+<h2 id="AJAX-向服务器发送请求"><a href="#AJAX-向服务器发送请求" class="headerlink" title="AJAX - 向服务器发送请求"></a>AJAX - 向服务器发送请求</h2><p>XMLHttpRequest 对象用于和服务器交换数据。<br>向服务器发送请求<br>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send()   方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="Ajax简介\ajax-p1.png" alt="logo" title="">
+                    <img src="/2017/01/16/Ajax简介/ajax-p1.png" alt="logo" title="">
                 </div>
                 <div class="image-caption">logo</div>
             </figure>  
@@ -214,19 +219,19 @@
 <li>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</li>
 </ol>
 <hr>
-<p>GET 请求<br>一个简单的 GET 请求：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(&#34;GET&#34;,&#34;demo_get.asp&#34;,true);&#10;xmlhttp.send();</span><br></pre></td></tr></table></figure></p>
+<p>GET 请求<br>一个简单的 GET 请求：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;demo_get.asp&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
 <hr>
-<p>在上面的例子中，您可能得到的是缓存的结果。<br>为了避免这种情况，请向 URL 添加一个唯一的 ID：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(&#34;GET&#34;,&#34;demo_get.asp?t=&#34; + Math.random(),true);&#10;xmlhttp.send();</span><br></pre></td></tr></table></figure></p>
+<p>在上面的例子中，您可能得到的是缓存的结果。<br>为了避免这种情况，请向 URL 添加一个唯一的 ID：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;demo_get.asp?t=&quot; + Math.random(),true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
 <hr>
-<p>如果您希望通过 GET 方法发送信息，请向 URL 添加信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(&#34;GET&#34;,&#34;demo_get2.asp?fname=Bill&#38;lname=Gates&#34;,true);&#10;xmlhttp.send();</span><br></pre></td></tr></table></figure></p>
+<p>如果您希望通过 GET 方法发送信息，请向 URL 添加信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;demo_get2.asp?fname=Bill&amp;lname=Gates&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
 <hr>
-<p>POST 请求<br>一个简单 POST 请求：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(&#34;POST&#34;,&#34;demo_post.asp&#34;,true);&#10;xmlhttp.send();</span><br></pre></td></tr></table></figure></p>
+<p>POST 请求<br>一个简单 POST 请求：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;POST&quot;,&quot;demo_post.asp&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
 <hr>
-<p>如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(&#34;POST&#34;,&#34;ajax_test.asp&#34;,true);&#10;xmlhttp.setRequestHeader(&#34;Content-type&#34;,&#34;application/x-www-form-urlencoded&#34;);&#10;xmlhttp.send(&#34;fname=Bill&#38;lname=Gates&#34;);</span><br></pre></td></tr></table></figure></p>
+<p>如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;POST&quot;,&quot;ajax_test.asp&quot;,true);</div><div class="line">xmlhttp.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);</div><div class="line">xmlhttp.send(&quot;fname=Bill&amp;lname=Gates&quot;);</div></pre></td></tr></table></figure></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="Ajax简介\ajax-p2.png" alt="logo" title="">
+                    <img src="/2017/01/16/Ajax简介/ajax-p2.png" alt="logo" title="">
                 </div>
                 <div class="image-caption">logo</div>
             </figure>
@@ -239,16 +244,16 @@
 <li>当响应就绪后对响应进行处理</li>
 </ol>
 <hr>
-<p>Async = true<br>当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.onreadystatechange=function()&#10;  &#123;&#10;  if (xmlhttp.readyState==4 &#38;&#38; xmlhttp.status==200)&#10;    &#123;&#10;    document.getElementById(&#34;myDiv&#34;).innerHTML=xmlhttp.responseText;&#10;    &#125;&#10;  &#125;&#10;xmlhttp.open(&#34;GET&#34;,&#34;test1.txt&#34;,true);&#10;xmlhttp.send();</span><br></pre></td></tr></table></figure></p>
+<p>Async = true<br>当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">xmlhttp.onreadystatechange=function()</div><div class="line">  &#123;</div><div class="line">  if (xmlhttp.readyState==4 &amp;&amp; xmlhttp.status==200)</div><div class="line">    &#123;</div><div class="line">    document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,true);</div><div class="line">xmlhttp.send();</div></pre></td></tr></table></figure></p>
 <hr>
-<p>Async = false<br>如需使用 async=false，请将 open() 方法中的第三个参数改为 false：<br><code>xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,false);</code><br>我们不推荐使用 async=false，但是对于一些小型的请求，也是可以的。<br>请记住，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。<br>注释：当您使用 async=false 时，请不要编写 <code>onreadystatechange</code> 函数 -   把代码放到 send() 语句后面即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(&#34;GET&#34;,&#34;test1.txt&#34;,false);&#10;xmlhttp.send();&#10;document.getElementById(&#34;myDiv&#34;).innerHTML=xmlhttp.responseText;</span><br></pre></td></tr></table></figure></p>
+<p>Async = false<br>如需使用 async=false，请将 open() 方法中的第三个参数改为 false：<br><code>xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,false);</code><br>我们不推荐使用 async=false，但是对于一些小型的请求，也是可以的。<br>请记住，JavaScript 会等到服务器响应就绪才继续执行。如果服务器繁忙或缓慢，应用程序会挂起或停止。<br>注释：当您使用 async=false 时，请不要编写 <code>onreadystatechange</code> 函数 -   把代码放到 send() 语句后面即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xmlhttp.open(&quot;GET&quot;,&quot;test1.txt&quot;,false);</div><div class="line">xmlhttp.send();</div><div class="line">document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</div></pre></td></tr></table></figure></p>
 <hr>
-<h2 id="AJAX-服务器响应"><a href="#AJAX-服务器响应" class="headerlink" title="AJAX - 服务器响应"></a>AJAX - 服务器响应</h2><p>服务器响应<br>如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。<br><img src="Ajax简介\ajax-p3.png" alt="logo"></p>
+<h2 id="AJAX-服务器响应"><a href="#AJAX-服务器响应" class="headerlink" title="AJAX - 服务器响应"></a>AJAX - 服务器响应</h2><p>服务器响应<br>如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。<br><img src="/2017/01/16/Ajax简介/ajax-p3.png" alt="logo"></p>
 <hr>
 <p>responseText 属性<br>如果来自服务器的响应并非 XML，请使用 responseText 属性。<br>responseText 属性返回字符串形式的响应，因此您可以这样使用：<br><code>document.getElementById(&quot;myDiv&quot;).innerHTML=xmlhttp.responseText;</code></p>
 <hr>
 <p>responseXML 属性<br>如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用   responseXML 属性：<br>请求 books.xml 文件，并解析响应：  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xmlDoc=xmlhttp.responseXML;&#10;txt=&#34;&#34;;&#10;x=xmlDoc.getElementsByTagName(&#34;ARTIST&#34;);&#10;for (i=0;i&#60;x.length;i++)&#10;  &#123;&#10;  txt=txt + x[i].childNodes[0].nodeValue + &#34;&#60;br /&#62;&#34;;&#10;  &#125;&#10;document.getElementById(&#34;myDiv&#34;).innerHTML=txt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">xmlDoc=xmlhttp.responseXML;</div><div class="line">txt=&quot;&quot;;</div><div class="line">x=xmlDoc.getElementsByTagName(&quot;ARTIST&quot;);</div><div class="line">for (i=0;i&lt;x.length;i++)</div><div class="line">  &#123;</div><div class="line">  txt=txt + x[i].childNodes[0].nodeValue + &quot;&lt;br /&gt;&quot;;</div><div class="line">  &#125;</div><div class="line">document.getElementById(&quot;myDiv&quot;).innerHTML=txt;</div></pre></td></tr></table></figure>
 <p>以上内容来自 WSchool <a href="http://www.w3school.com.cn/ajax/ajax_xmlhttprequest_response.asp" target="_blank" rel="external">点击</a></p>
 
         </div>
@@ -257,7 +262,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-01-18T10:44:42.663Z" itemprop="dateUpdated">2017年1月18日 18:44</time>
+    最后更新时间：<time datetime="2017-02-08T08:56:34.941Z" itemprop="dateUpdated">2017年2月8日 16:56</time>
 </span><br>
 
 
@@ -300,7 +305,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&title=《Ajax简介》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&title=《Ajax简介》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -476,7 +481,7 @@ var _hmt = _hmt || [];
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&title=《Ajax简介》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://liuzhe6.github.io/2017/01/16/Ajax简介/&title=《Ajax简介》 — A Coder's Blog&source=哪怕天再高那又怎样，踮起脚尖就更靠近阳光" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
